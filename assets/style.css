@@ -17,8 +17,8 @@ body {
     height: 100vh;
     touch-action: manipulation;
     touch-action: none;
-    /* overflow: hidden; */
-    overflow-y: scroll;
+    overflow: hidden;
+    /* overflow-y: scroll; */
 }
 /*  首頁 */
 .container{
@@ -1202,10 +1202,12 @@ body {
     #lots .ear{
         top: 30%;
         right: 0;
+        z-index: 9;
     }
     #lots .eyes{
         top: 30%;
         left: 0;
+        z-index: 9;
     }
     
 }
@@ -1269,11 +1271,13 @@ body {
         width: 150px;
         top: 30%;
         right: 0;
+        z-index: 9;
     }
     #lots .eyes{
         width: 150px;
         top: 30%;
         left: 0;
+        z-index: 9;
     }
 }
   
