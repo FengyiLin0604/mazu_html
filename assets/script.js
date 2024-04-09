@@ -288,12 +288,16 @@ function removeLotCanAndShowLot(){
     var lotcan =document.querySelector('.lot-can');
     var lots = document.querySelector('.lot-group');
     var picklot = document.querySelector('.picklot');
+    var eyes = document.querySelector('.eyes');
+    var ear = document.querySelector('.ear');
     if(window.innerWidth>768){
         lotpage.setAttribute('style','background-image:url("assets/draw/P4-背景.jpg");');
 
     }else{
         lotpage.setAttribute('style','background-image:url("assets/lot/425x800-求籤畫面.jpg");');
     }
+    eyes.setAttribute('style','display:none');
+    ear.setAttribute('style','display:none');
     picklot.setAttribute('style','display:none');
     lotcan.setAttribute('style','display:none');
     lots.setAttribute('style','display:none !important');
@@ -490,7 +494,7 @@ function changedrawbackground(){
     var mazu = document.querySelector('.mazu');
     var draw = document.querySelector('.draw');
     if(window.innerWidth > 768){
-        // drawback.setAttribute('style','background-image:url("/assets/temple/地圖背景.jpg")');
+        drawback.setAttribute('style','background-image:url("/assets/temple/1024x1080-選廟地圖.jpg")');
         console.log('1' + window.innerWidth);
     }else{
         if(window.innerWidth>680){
@@ -516,8 +520,10 @@ function resetbackground(){
     shinne.classList.remove('show');
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
-    if(window.innerWidth>767){
-        drawback.setAttribute('style','background-image:url("/assets/lot/768x1080-求籤畫面.jpg")');
+    if(window.innerWidth>=1440){
+        drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
+    }else if(window.innerWidth >767){
+        drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
     }else{
         drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
     }
