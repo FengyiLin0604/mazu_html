@@ -445,172 +445,6 @@ body {
     background-color: gold;
     color: red;
 }
-@media screen and (max-width:680px){
-    .temple{
-        background-image: url('/assets/temple/425x800-選廟地圖.jpg');
-        background-position: center;
-        background-attachment: fixed;
-    }
-    .temple .title{
-        display: block;
-        padding: 8px 30px;
-    }
-    .templeWrap{
-        flex-direction: column;
-        align-items: center;
-        top: 10%;
-    }
-    .temple .map img{
-        width: 300px;
-    }
-
-    .temple .map span:hover{
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-    .templeintro .templeintro-wrapper h3{
-        width: 300px;
-        font-size: 1.2rem;
-    }
-    .templeintro .templeintro-wrapper h3::before{
-        width: 35px;
-        height: 35px;
-        top: -20%;
-        left: -3.5%;
-    }
-    .templeintro .templeintro-wrapper .introContent{
-        max-width: 280px;
-        height: 200px;
-        padding: 10px 20px;
-        /* width: 280px; */
-        /* height: 250px; */
-    }
-    .templeintro .templeintro-wrapper a{
-        padding: 2px 60px;
-        font-size: 1.2rem;
-        left: 15%;
-    }
-    .temple .map .newhouse{
-        top: 40%;
-        left: -10%;
-    }
-    .temple .map .newhouse span {
-        width: 120px;
-        padding: 4px 6px;
-        padding-left: 12px;
-        font-size: .775rem;
-        border-radius: 50px;
-        color: rgba(255,255,255,0) ;
-        background-color: rgba(255,255,255,0);
-    }
-    .temple .map .newhouse span:hover{
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-    .temple .map .newhouse span::before{
-        left: 45%;
-        top: -120%;
-    }
-    .temple .map .newhouse img.show{
-        width: 120px;
-        top: -200%;
-        left: 118%;
-    }
-    .temple .map .newhouse span:hover:before{
-        left: 45%;
-        top: -120%;
-    }
-    .temple .map .tashi{
-        bottom: 40%;
-        right: 30%;
-    }
-    .temple .map .tashi span{
-        width: 120px;
-        padding: 4px 6px;
-        padding-left: 12px;
-        font-size: .775rem;
-        color: rgba(255,255,255,0) ;
-        background-color: rgba(255,255,255,0);
-    }
-    .temple .map .tashi span:hover{
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-    .temple .map .tashi img.show{
-        width: 80px;
-        top: -135%;
-        right: -115%;
-    }
-    .temple .map .zhongli{
-        top: 38%;
-        left: 43%;
-    }
-    .temple .map .zhongli span{
-        width: 120px;
-        padding: 4px 6px;
-        padding-left: 12px;
-        font-size: .775rem;
-        color: rgba(255,255,255,0) ;
-        background-color: rgba(255,255,255,0);
-    }
-    .temple .map .zhongli span:hover{
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-    .temple .map .zhongli span::before{
-        left: -8%;
-        top: -140%;
-    }
-    .temple .map .zhongli img.show{
-        width: 70px;
-        top: -190%;
-        left: -95%;
-    }
-    .temple .map .zhongli span:hover:before{
-        left: -8%;
-        top: -140%;
-    }
-
-    .temple .map .taoyuan{
-        top: 13.5%;
-        right: 30%;
-    }
-    .temple .map .taoyuan span{
-        width: 120px;
-        padding: 4px 6px;
-        padding-left: 12px;
-        font-size: .775rem;
-        color: rgba(255,255,255,0) ;
-        background-color: rgba(255,255,255,0);
-    }
-    .temple .map .taoyuan span:hover{
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-    .temple .map .taoyuan img.show{
-        width: 50px;
-        left: -83%;
-        top: 140%;
-    }
-    .temple .map .taoyuanbig{
-        top: 28%;
-    }
-    .temple .map .taoyuanbig span{
-        width: 135px;
-        padding: 4px 6px;
-        padding-left: 12px;
-        font-size: .775rem;
-        color: rgba(255,255,255,0) ;
-        background-color: rgba(255,255,255,0);
-    }
-    .temple .map .taoyuanbig span:hover{
-        width: 140px;
-        font-size: .875rem;
-        color: #f7f7f7;
-        background-color: #A64231;
-    }
-
-}
 /*  抽籤 */
 .lots{
     position: relative;
@@ -994,62 +828,6 @@ body {
 
 }
 
-@media screen and (max-width:425px){
-
-}
-@media screen and (max-width:390px) {
-    #draw{
-        justify-content: center;
-        background-image: url('/assets/draw/425x800-求籤畫面.jpg');
-    }
-    .draw{
-        width: 300px;
-        height: 250px;
-    }
-    .baecard img{
-        width: 150px;
-    }
-    .mazu{
-       display: none;
-    }
-    #baemove{
-        font-size: 1.4rem;
-        width: 200px;
-        top: 15px;
-    }
-    .buashow{
-        left: 0;
-        top: 20%;
-    }
-    .buashow .shinne.show{
-        display: block;
-        /* height: 400px; */
-        left: -42%;
-        width: 700px;
-        top: 10%;
-    }
-    .checkDraw{
-        font-size: 1.4rem;
-        width: 250px;
-        left: 17%;
-    }
-    .baestyle .spotright {
-        position: absolute;
-        z-index: 11;
-        width: 100px;
-        height: 100px;
-        top: 18%;
-        right: 0;
-    }
-    .baestyle .spotleft{
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        z-index: 11;
-        top: 50%;
-        left: 0;
-    }
-}
 /*  看籤 */
 .messagePannel{
     max-width: 100%;
@@ -1118,45 +896,6 @@ body {
     background-color: #F0D692;
     color: #A64231;
 }
-@media screen and (max-width:390px) {
-    .messagePannel{
-        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
-        background-size: cover;
-    }
-    .rollbook{
-        width: 400px;
-        height: 400px;
-        top: 40%;
-        left: 2.5%;
-        background-image: url('/assets/showmessage/手機版-籤詩卷軸_直.png');
-        background-position: center;
-        background-size: contain;
-        z-index: 99;
-        flex-direction: column;
-        writing-mode: inherit;
-    }
-    .rollbook h4{
-        writing-mode: inherit;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .rollbook p{
-        width: 300px;
-        margin: 0 auto;
-        writing-mode: inherit;
-        text-align: justify;
-        font-size: 1.1rem;
-        padding: 0 4px;
-    }
-    .shareBtn{
-        bottom: 12%;
-    }
-    #shareBtn{
-        width: 300px;
-        font-size: 0.975em;
-        padding: 4px 6px;
-    }
-}
 @keyframes rollmove{
     0%{
       transform: rotate(0deg);
@@ -1182,45 +921,6 @@ body {
     }
   }
 
-@media screen and (max-width:390px){
-
-}
-
-  @media screen and (max-width:430px){
-    .container{
-        background-image: url("/assets/homepage/425x800-起始畫面.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: top center;
-        background-attachment: fixed;
-    }
-    .container img{
-        display: none;
-    }
-    .introduce{
-        bottom: 2.5%;
-    }
-    .ear{
-        right: -5%;
-    }
-    .eyes{
-        left: -5%;
-    }
-    .introduce .starttodraw a {
-        padding: 4px 50px;
-        font-size: 1.2rem;
-    }
-    .buashow{
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .checkDraw{
-        position: relative;
-        width: 80%;
-        left: 0;
-    }
-}
 
 /*   /分隔線*/
 @media only screen and (max-width:1440px) {
@@ -1245,7 +945,7 @@ body {
         top: 17%;
     }
     .draw{
-        top: 60%;
+        top: 50%;
         left: 25%;
     }
     #draw{
@@ -1745,7 +1445,7 @@ body {
         display: none;
     }
     .introduce{
-        bottom: 26.5%;
+        bottom: 12%;
     }
     .ear{
         width: 30%;
@@ -1764,6 +1464,13 @@ body {
     }
     .templeWrap{
         top: 15%;
+        display: grid;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 100%;
+    }
+    .templeintro .templeintro-wrapper .introContent{
+        width: 100%;
     }
     .map{
         display: none;
@@ -1817,12 +1524,12 @@ body {
         margin-bottom: 20px;
     }
     .templeintro .templeintro-wrapper a{
-        left: 10%;
+        left: 15%;
         top: 20px;
     }
     .templeintro .templeintro-wrapper h3::before {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         top: -2px;
         left: -10px;
     }
