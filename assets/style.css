@@ -1589,6 +1589,9 @@ body {
         top: 60%;
         right: 10%;
     }
+    .picklot::before{
+        right: 15%;
+    }
     #lots .ear{
         width: 30%;
     }
