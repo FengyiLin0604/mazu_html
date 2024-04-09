@@ -18,7 +18,7 @@ body {
     touch-action: manipulation;
     touch-action: none;
     overflow: hidden; /* 隐藏溢出的内容 */
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 /*  首頁 */
 .container{
@@ -125,8 +125,15 @@ body {
     }
 }
 @media screen and (max-width:390px){
+    .container{
+        background-image: url("/assets/homepage/425x800-起始畫面.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        background-attachment: fixed;
+    }
     .container img{
-        display: block;
+        display: none;
         min-height: 100%;
     }
     .introduce{
