@@ -1,8 +1,16 @@
 /* 重設瀏覽器預設樣式 */
+
+@font-face {
+    font-family: 'customfont';
+    src: url('/assets/AwkwardKai_V1_01.woff') format("woff"),
+           url('/assets/AwkwardKai_V1_01.ttf') format("truetype"),
+           url('/assets/AwkwardKai_V1_01.eot') format("embedded-opentype");
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'customfont';
 
 }
 
