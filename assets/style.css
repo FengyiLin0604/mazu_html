@@ -1,0 +1,1676 @@
+/* 重設瀏覽器預設樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* 設定整體背景和字體 */
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw; /* 视窗的宽度 */
+    max-height: 100vh; /* 视窗的高度 */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+/*  首頁 */
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.container img{
+    width: 100%;
+    /* height: 100%; */
+    min-height: 100%;
+}
+.ear{
+    position: absolute;
+    width: 350px;
+    top: 25%;
+    right: 9%;
+    animation: upanddown 0.5s linear infinite;
+    z-index: 12;
+}
+.ear img{
+    width: 100%;
+    
+}
+.eyes{
+    position: absolute;
+    width: 350px;
+    top: 25%;
+    left: 11.5%;
+    z-index: 12;
+    animation: upanddown 0.5s linear infinite;
+}
+.eyes img{
+    width: 100%;
+}
+.introduce{
+    position: absolute;
+    bottom: 2.5%;
+    text-align: center;
+    width: 100%;
+}
+.introduce .starttodraw a{
+    border-radius: 50px;
+    background: #A64231;
+    padding: 15px 100px;
+    text-decoration: none;
+    border-style: none;
+    font-size: 26px;
+    color: #f7f7f7;
+    cursor: pointer;
+    letter-spacing: 8px;
+    
+}
+.introduce .starttodraw a:hover{
+    background: #F0D692;
+    color: red;
+}
+@media screen and (max-width:1440px) {
+    .container img{
+        height: 100%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container{
+        overflow: hidden;
+    }
+    .container img{
+        height: 100%;
+    }
+    .ear{
+        width: 200px;
+        top: 20%;
+        right: 0;
+        animation: upanddown 1s linear infinite;
+    }
+    .eyes{
+        /* left: -64px; */
+        width: 200px;
+        top:20%;
+        left: 0;
+        animation: upanddown 1s linear infinite;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        background-image: url('/assets/homepage/425x800-起始畫面.jpg');
+    }
+    .container img{
+        height: 100%;
+    }
+    .introduce{
+        bottom: 4%;
+    }
+    .introduce .starttodraw a{
+        padding: 8px 70px;
+    }
+    .ear{
+        width: 150px;
+        top: 30%;
+    }
+    .eyes{
+        width: 150px;
+        top: 30%;
+    }
+}
+@media screen and (max-width:390px){
+    .container img{
+        display: block;
+        min-height: 100%;
+    }
+    .introduce{
+        bottom: 10%;
+        width: 200px;
+        height: auto;
+        left: 30%;
+        display: block;
+        flex-direction: unset;
+        justify-content: center;
+    }
+    .introduce .starttodraw{
+        width: fit-content;
+    }
+    .introduce .starttodraw a{
+        font-size: 1.2rem;
+        padding: 6px 20px;
+    }
+    .ear{
+        display: block;
+        width: 130px;
+        /* right: -30px; */
+        top: 30%;
+        right:0
+    }
+    .eyes{
+        display: block;
+        width: 130px;
+        height: 130px;
+        top: 30%;
+        left: -20px;
+    }
+}
+
+/*  廟宇 */
+.temple{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/temple/地圖背景.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.temple .title
+{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    background-image: url('/assets/temple/P3-捲軸.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 20px 40px;
+    top: 10%;
+}
+.templeWrap{
+    position: relative;
+    display: flex;
+    top: 14.8%;
+    /* left: -15px; */
+    margin: auto;
+    justify-content: center;
+}
+.temple .map{
+    width: fit-content;
+    position: relative;
+    left: -3.1%;
+}
+.temple .map .map-wrapper{
+    margin: auto;
+    margin-left: 0;
+}
+.temple .map img{
+    width: 768px;
+}
+
+/* 廟宇圖標定位 */
+.temple .map .tashi{
+    position: absolute;
+    bottom: 35%;
+    right: 35%;
+    cursor: pointer;
+    /* background-color: #A64231; */
+    color: #f7f7f7;
+    padding:8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .tashi img{
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: -550%;
+    right: -370%;
+}
+.temple .map .tashi img.show{
+    display: block;
+}
+.temple .map .tashi span{
+    position: absolute;
+    width: 150px;
+    z-index: 12;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .tashi span:hover{
+    width: 200px;
+    font-size: 1.4rem;
+    text-align: left;
+ }
+.temple .map .tashi span:before{
+    position: absolute;
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 40px;
+    height: 40px;
+    left: -20%;
+    top: -25%;
+}
+.temple .map .tashi span:hover::before{
+    left: -15%;
+    width: 45px;
+
+}
+.temple .map .newhouse{
+    position: absolute;
+    left: 10%;
+    top: 36%;
+    cursor: pointer;
+    /* background-color: #A64231; */
+    color: #f7f7f7;
+    padding:8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+}
+.temple .map .newhouse img{
+    display: none;
+    position: absolute;
+    top: -280%;
+    left: -220%;
+    width: 265px;
+}
+.temple .map .newhouse img.show{
+    display: block;
+    
+}
+.temple .map .newhouse span{
+    position: absolute;
+    width: 150px;
+    z-index: 12;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .newhouse span:hover{
+    width: 200px;
+    font-size: 1.4rem;
+    text-align: left;
+ }
+.temple .map .newhouse span::before{
+    position: absolute;
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 40px;
+    height: 40px;
+    left: -20%;
+    top: -20%;
+}
+.temple .map .newhouse span:hover::before{
+    width: 45px;
+    top: -25%;
+    left: -15%;
+ }
+.temple .map .zhongli{
+    position: absolute;
+    top: 32.5%;
+    left: 42%;
+    cursor: pointer;
+    /* background-color: #A64231; */
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .zhongli img{
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: -280%;
+    left: -220%;
+}
+.temple .map .zhongli img.show{
+    display: block;  
+}
+.temple .map .zhongli span{
+    position: absolute;
+    width: 120px;
+    z-index: 12;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .zhongli span::before{
+    position: absolute;
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 40px;
+    height: 40px;
+    top: -25%;
+    left: -25%;
+    z-index: 13;
+}
+.temple .map .zhongli span:hover{
+   width: 150px;
+   font-size: 1.4rem;
+   text-align: left;
+}
+.temple .map .zhongli span:hover::before{
+    width: 45px;
+    top: -25%;
+    left: -20%;
+}
+
+.temple .map .taoyuan{
+    position: absolute;
+    top: 22%;
+    right: 35%;
+    cursor: pointer;
+    /* background-color: #A64231; */
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .taoyuan img{
+    display: none;
+    position: absolute;
+    width: 120px;
+    left: -200%;
+    top: 60%;
+}
+.temple .map .taoyuan img.show{
+    display: block;
+}
+.temple .map .taoyuan span{
+    position: absolute;
+    width: 120px;
+    z-index: 12;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .taoyuan span:hover{
+    width: 150px;
+    font-size: 1.4rem;
+    text-align: left;
+ }
+.temple .map .taoyuan span::before{
+    position: absolute;
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 40px;
+    height: 40px;
+    top: -20%;
+    left: -25%;
+}
+.temple .map .taoyuan span:hover::before{
+    width: 45px;
+    height: 45px;
+    left: -22%;
+    top: -30%;
+ }
+
+.temple .map .taoyuanbig{
+    position: absolute;
+    top: 33%;
+    right: 32%;
+    cursor: pointer;
+}
+.temple .map .taoyuanbig span{
+    position: absolute;
+    width: 170px;
+    z-index: 12;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #f7f7f7;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.temple .map .taoyuanbig span:hover{
+    width: 220px;
+    font-size: 1.4rem;
+    text-align: left;
+ }
+/* .temple .map .taoyuanbig img{
+    display: none;
+    position: absolute;
+    width: 110px;
+    
+}
+.temple .map .taoyuanbig img.show{
+    display: block;
+    position: absolute;
+    left: 150%;
+    top: -400%;
+} */
+.temple .map .taoyuanbig span::before{
+    position: absolute;
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 40px;
+    height: 40px;
+    top: -45%;
+    left: -15%;
+}
+.temple .map .taoyuanbig span:hover::before{
+    width: 43px;
+    height: 43px;
+    left: -12.5%;
+    top: -25%;
+}
+.templeintro .templeintro-wrapper{
+    position: relative;
+    top: 10%;
+}
+.templeintro .templeintro-wrapper h3{
+    width: 400px;
+    padding: 6px 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    border-style: none;
+    letter-spacing: 4px;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+    top: 4px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.templeintro .templeintro-wrapper h3::before{
+    content: url('/assets/temple/P3-地標icon.svg');
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -10%;
+    left: -8px;
+}
+.templeintro .templeintro-wrapper .introContent{
+    position: relative;
+    background-color: white;
+    padding: 40px 20px;
+    max-width: 350px;
+    width: 350px;
+    height: 280px;
+    margin: auto;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow-y: scroll;
+    top: -10%;
+}
+.templeintro .templeintro-wrapper .introContent .content-wrapper img{
+    width: 100%;
+}
+.templeintro .templeintro-wrapper a{
+    position: relative;
+    background-color: red;
+    padding: 10px 70px;
+    border-radius: 20px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    margin:auto;
+    z-index: 11;
+    top: -20%;
+    left: 18%;
+    cursor: pointer;
+}
+.templeintro .templeintro-wrapper a:hover{
+    background-color: gold;
+    color: red;
+}
+@media screen and (max-width:1440px) {
+    .temple{
+        background-image: url('/assets/temple/1440x1920-選廟地圖.jpg');
+    }
+}
+@media screen and (max-width: 1024px) {
+    .temple{
+        background-image: url('/assets/temple/1024x1920-選廟地圖.jpg');
+    }
+    .templeWrap{
+        top: 17%;
+    }
+    .templeintro .templeintro-wrapper{
+        left: -10px;
+    }
+    .temple .map{
+        left: 0;
+    }
+    .temple .map img{
+        width: 100%;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 380px;
+    }
+    .templeintro .templeintro-wrapper a{
+        padding: 6px 70px;
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+    }
+    .temple .map .tashi img{
+        width: 150px;
+        top: -456%;
+        right: -310%;
+    }
+    .temple .map .newhouse img{
+        width: 240px;
+    }
+    .temple .map .zhongli img{
+        width: 150px;
+        top: -246%;
+        left: -179%;
+    }
+    .temple .map .taoyuan img{
+        width: 95px;
+        left: -145%;
+        top: 64%;
+    }
+    .temple .map .newhouse span::before{
+        width: 35px;
+        height: 35px;
+        left: -15%;
+    }
+    .temple .map .taoyuan span::before{
+        width: 35px;
+        height: 35px;
+        left: -18%;
+    }
+    .temple .map .zhongli span::before{
+        width: 35px;
+        height: 35px;
+        left: -18%;
+    }
+    .temple .map .tashi span::before{
+        width: 35px;
+        height: 35px;
+        left: -15%;
+    }
+    .temple .map .taoyuanbig span::before{
+        width: 35px;
+        height: 35px;
+        top: -20%;
+        left: -14%;
+    }
+    
+}
+@media screen and (max-width: 980px) {
+    .temple{
+        background-image: url('/assets/temple/768x1334-選廟地圖.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .templeWrap{
+        justify-content: space-around;
+        align-items: center;
+        top: 35%;
+    }
+    .temple .title{
+        display: block;
+        padding: 8px 30px;
+    }
+    .temple .map img{
+        width: 450px;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 300px;
+        font-size: 1.2rem;
+    }
+    .templeintro .templeintro-wrapper h3::before{
+        width: 40px;
+        height: 40px;
+        top: -20%;
+        left: -16px;
+    }
+    .templeintro .templeintro-wrapper .introContent{
+        width: 280px;
+    }
+    .templeintro .templeintro-wrapper a{
+        font-size: 1.2rem;
+        padding: 6px 70px;
+        left: 14%;
+    }
+    .temple .map .newhouse{
+        top: 30%;
+        left: 8%;
+        z-index: 14;
+    }
+    .temple .map .newhouse span{
+        width: 120px;
+        font-size: 0.775rem;
+    }
+    .temple .map .newhouse span::before {
+        width: 25px;
+        height: 25px;
+        left: -12%;
+        top: -10%;
+    }
+    .temple .map .newhouse img.show {
+        display: block;
+        width: 160px;
+        top: -42%;
+        left: -90%;
+    }
+    .temple .map .newhouse span:hover {
+        width: 150px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    .temple .map .newhouse span:hover::before{
+        width: 30px;
+        height: 30px;
+        top: -15%;
+        left: -12%;
+    }
+    .temple .map .tashi span{
+        width: 120px;
+        font-size: 0.775rem;
+    }
+    .temple .map .tashi span::before {
+        width: 25px;
+        height: 25px;
+        left: -12%;
+        top: -5%;
+    }
+    .temple .map .tashi img.show {
+        display: block;
+        width: 110px;
+        top: -301%;
+        right: -233%;
+    }
+    .temple .map .tashi span:hover {
+        width: 150px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    .temple .map .tashi span:hover::before {
+        left: -17%;
+        width: 35px;
+        top: -25%;
+    }
+    .temple .map .zhongli{
+        top: 29.5%;
+        left: 40%;
+    }
+    .temple .map .zhongli span{
+        width: 95px;
+        font-size: 0.775rem;
+        z-index: 13;
+    }
+    .temple .map .zhongli span::before {
+        width: 25px;
+        height: 25px;
+        left: -15%;
+        top: -8%;
+    }
+    .temple .map .zhongli span:hover {
+        width: 115px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    .temple .map .zhongli img.show {
+        display: block;
+        width: 105px;
+        top: -100%;
+        left: -85%;
+    }
+    .temple .map .zhongli span:hover::before{
+        width: 30px;
+        height: 30px;
+        top: -15%;
+        left: -13%;
+    }
+    .temple .map .taoyuan{
+        top: 18.5%;
+    }
+    .temple .map .taoyuan img{
+        width: 120px;
+    }
+    .temple .map .taoyuan img.show{
+        width: 80px;
+        left: -100%;
+        top: 65%;
+    }
+    .temple .map .taoyuan span{
+        width: 100px;
+        font-size: 0.775rem;
+    }
+    .temple .map .taoyuan span::before {
+        width: 25px;
+        height: 25px;
+        left: -15%;
+        top: -6%;
+    }
+    .temple .map .taoyuan span:hover::before{
+        width: 30px;
+        height: 30px;
+    }
+    .temple .map .taoyuan span:hover {
+        width: 100px;
+        font-size: 0.775rem;
+        text-align: left;
+    }
+    .temple .map .taoyuanbig{
+        top: 30%;
+    }
+    .temple .map .taoyuanbig span{
+        width: 135px;
+        font-size: 0.775rem;
+    }
+    .temple .map .taoyuanbig span::before {
+        width: 25px;
+        height: 25px;
+        left: -12%;
+        top: -10%;
+    }
+    .temple .map .taoyuanbig span:hover {
+        width: 170px;
+        font-size: 1rem;
+        text-align: left;
+    }
+    .temple .map .taoyuanbig span:hover::before{
+        width: 30px;
+        height: 30px;
+        top: -6%;
+    }
+
+}
+@media screen and (max-width:680px){
+    .temple{
+        background-image: url('/assets/temple/425x800-選廟地圖.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .temple .title{
+        display: block;
+        padding: 8px 30px;
+    }
+    .templeWrap{
+        flex-direction: column;
+        align-items: center;
+        top: 18.8%;
+    }
+    .temple .map img{
+        width: 300px;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 300px;
+        font-size: 1.2rem;
+    }
+    .templeintro .templeintro-wrapper h3::before{
+        width: 35px;
+        height: 35px;
+        top: -20%;
+        left: -3.5%;
+    }
+    .templeintro .templeintro-wrapper .introContent{
+        max-width: 280px;
+        width: 280px;
+        /* height: 250px; */
+    }
+    .templeintro .templeintro-wrapper a{
+        padding: 2px 60px;
+        font-size: 1.2rem;
+        left: 15%;
+    }
+    .temple .map .newhouse{
+        top: 40%;
+        left: -10%;
+    }
+    .temple .map .newhouse span {
+        width: 120px;
+        padding: 4px 6px;
+        padding-left: 12px;
+        font-size: .775rem;
+        border-radius: 50px;
+    }
+    .temple .map .newhouse span::before{
+        left: 45%;
+        top: -120%;
+    }
+    .temple .map .newhouse img.show{
+        width: 120px;
+        top: -200%;
+        left: 118%;
+    }
+    .temple .map .newhouse span:hover:before{
+        left: 45%;
+        top: -120%;
+    }
+    .temple .map .tashi{
+        bottom: 40%;
+        right: 30%;
+    }
+    .temple .map .tashi span{
+        width: 120px;
+        padding: 4px 6px;
+        padding-left: 12px;
+        font-size: .775rem;
+    }
+    .temple .map .tashi img.show{
+        width: 80px;
+        top: -135%;
+        right: -115%;
+    }
+    .temple .map .zhongli{
+        top: 38%;
+        left: 43%;
+    }
+    .temple .map .zhongli span{
+        width: 120px;
+        padding: 4px 6px;
+        padding-left: 12px;
+        font-size: .775rem;
+    }
+    .temple .map .zhongli span::before{
+        left: -8%;
+        top: -140%;
+    }
+    .temple .map .zhongli img.show{
+        width: 70px;
+        top: -190%;
+        left: -95%;
+    }
+    .temple .map .zhongli span:hover:before{
+        left: -8%;
+        top: -140%;
+    }
+
+    .temple .map .taoyuan{
+        top: 13.5%;
+        right: 30%;
+    }
+    .temple .map .taoyuan span{
+        width: 120px;
+        padding: 4px 6px;
+        padding-left: 12px;
+        font-size: .775rem;
+    }
+    .temple .map .taoyuan img.show{
+        width: 50px;
+        left: -83%;
+        top: 140%;
+    }
+    .temple .map .taoyuanbig{
+        top: 28%;
+    }
+    .temple .map .taoyuanbig span{
+        width: 135px;
+        padding: 4px 6px;
+        padding-left: 12px;
+        font-size: .775rem;
+    }
+}
+/*  抽籤 */
+.lots{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url('/assets/draw/P4-籤無光芒.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.lot-group{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 3px;
+    top: 42.5%;
+    z-index: 10;
+}
+.lot{
+    width: 30px;
+    cursor: pointer;
+}
+.lot img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .lot:hover img {
+    transform: translateY(-80px);
+    /* 更换图片 */
+    content: url('/assets/draw/P4-籤_白框_.svg');
+  }
+.lot-can{
+    position: relative;
+    max-width: 300px;
+    top: 21.5%;
+    margin: auto;
+    z-index: 999;
+}
+.lot-can img{
+    width: 100%;
+    margin: auto;
+}
+.lotshinne{
+    position: absolute;
+    top: 15%;
+    left: 18.5%;
+    max-width: 1200px;
+    z-index: 8;
+    display: none;
+}
+.lotshinne.show{
+    display: block;
+}
+.lotshinne img{
+    width: 100%;
+    animation: rollmove 6s linear infinite;
+}
+.lotcontent{
+    display: none;
+    position: absolute;
+    top: 39%;
+    left: 40%;
+    z-index: 99999999;
+    width: 380px;
+}
+.lotcontent.active{
+    display: block;
+}
+.lotcontent .startdraw a{
+    position: absolute;
+    bottom: -35px;
+    left: 4%;
+    width: 350px;
+    text-decoration: none;
+    background-color: #A64231;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 40px;
+    text-align: center;
+    padding: 4px 6px;
+}
+.lotcontent .startdraw a:hover{
+    color:#A64231;
+    background-color: #F0D692;
+}
+
+.lotcontent .lotcontent-wrapper .table{
+    text-align: center;
+    background-color: white;
+}
+.lotcontent .lotcontent-wrapper .loticon{
+    position: absolute;
+    width: 40px;
+    top: -1%;
+    right: -30%;
+}
+.lotcontent .lotcontent-wrapper .loticon img{  
+    width: 100%;
+    height: 440px;
+}
+.lotcontent .thead{
+    text-align: center;
+    padding: 8px 10px;
+    border-style: solid;
+    border-color: red;
+    border-bottom-width: 0.25px;
+}
+.lotcontent .thead h3{
+    color: red;
+    font-size: 1.4rem;
+}
+.lotcontent .tbody{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    border-style: solid;
+    border-color: red;
+    border-top-width: 1px;
+}
+.lotcontent .tbody p{
+    width: 52px;
+    margin: auto;
+    text-align: center;
+    color: red;
+    font-size: 2.2rem;
+    padding-top: 12x;
+    padding-bottom: 12px;
+}
+.lotcontent .bodycenter{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    border-style: solid;
+    border-top-width: 0.5px;
+    border-bottom-width: 1px;
+    border-color: red;
+}
+.lotcontent .tbody .bodycenter p{
+    margin: 6px 4px;
+}
+.lotcontent .bodyleft{
+    display: flex;
+}
+.lotcontent .bodyright{
+    display: flex;
+}
+.picklot{
+    display: none;
+    position: absolute;
+    top: 60%;
+    right: 15%;
+}
+.picklot span{
+    writing-mode: vertical-lr;
+    padding: 16px 8px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #A64231;
+    color: #f7f7f7;
+    font-size: 1.4rem;
+    letter-spacing: 8px;
+
+}
+.picklot::before {
+    content: url(http://127.0.0.1:5173/assets/lot/白色箭頭.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -30%;
+    right: 30%;
+}
+#lots .ear{
+    width: 300px;
+    top: 2.5%;
+    right: 22.5%;
+    animation: upanddown 0.4s linear infinite;
+}
+#lots .eyes{
+    width: 300px;
+    top: 5%;
+    left: 21.5%;
+    animation: upanddown 0.4s linear infinite;
+}
+@media screen and (max-width:1440px) {
+    .lots{
+        background-image: url('/assets/lot/1440x1920-求籤畫面.jpg');
+    }
+    .picklot{
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .lots{
+        background-image: url('/assets/lot/1024x1920-求籤畫面.jpg');
+    }
+    .lotcontent{
+        left: 31.5%;
+    }
+    .picklot{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .lots{
+        background-image: url('/assets/lot/768x1334-求籤畫面.jpg');
+        background-position: top;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .lotshinne{
+        left: 0;
+        top: 20%;
+    }
+    .lotcontent{
+        left: 31%;
+    }
+    .lotcontent.active{
+        width: 300px;
+    }
+    .lotcontent .tbody p{
+        font-size: 1.8rem;
+        width: 40px;
+    }
+    .loticon{
+        display: none;
+    }
+    .lotcontent .startdraw a{
+        width: 270px;
+    }
+    .picklot{
+        display: block;
+        animation: shake 0.2s linear infinite;
+        top: 70%;
+    
+    }
+    #lots .ear{
+        top: 30%;
+        right: 0;
+    }
+    #lots .eyes{
+        top: 30%;
+        left: 0;
+    }
+    
+}
+@media screen and (max-width:680px) {
+    .lots{
+        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
+        background-size: cover;
+    }
+    .lot-can{
+        width: 250px;
+    }
+    .lotshinne{
+        top: 30%;
+        left: 0;
+        width: 100%;
+    }
+    .picklot{
+        top: 60%;
+        right: 5%;
+        position: absolute;
+        height: fit-content;
+        writing-mode: vertical-lr;
+        right: 5%;
+        letter-spacing: 4px;
+        /* background: #A64231; */
+        color: #f7f7f7;
+        padding: 30px 4px;
+        border-radius: 50px;
+    }
+    .picklot::before{
+        content: url('/assets/lot/白色箭頭.svg');
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -10%;
+        right: 30%;
+    }
+
+    .picklot img{
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .lotcontent .tbody p {
+        width: 39px;
+        font-size: 1.6rem;
+    }
+    .lotcontent{
+        width: 165px;
+        left: 15%;
+        top: 45%;
+    }
+    .lotcontent .startdraw a{
+        left: 2%;
+    }
+    .lotcontent .lotcontent-wrapper .loticon img{
+        height: 200px;
+    }
+    #lots .ear{
+        width: 150px;
+        top: 30%;
+        right: 0;
+    }
+    #lots .eyes{
+        width: 150px;
+        top: 30%;
+        left: 0;
+    }
+}
+  
+/*  擲杯 */
+#draw{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/draw/P4-背景.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+}
+.draw{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 50px;
+    width: 700px;
+    height: 350px;
+    top: 50%;
+    left: 32.5%;
+}
+.mazu{
+    position: absolute;
+    top: -1%;
+    left: 32.5%;
+    max-width: 480px;
+    margin: auto;
+    z-index: 999;
+}
+.mazu img{
+    width: 100%;
+}
+/* 針對baecard的設定 */
+.buabae {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+/* 默認隱藏所有圖片 */
+.baecard {
+    display: none;
+}
+
+/* 只顯示第一張圖片 */
+.baecard.show {
+    display: block;
+    position: relative;
+    top: 20%;
+}
+
+/* 圖片大小和居中設定 */
+.baecard img {
+    max-width: 100%; /* 防止圖片超出畫面 */
+    width: 300px;
+    height: auto; /* 保持圖片原有比例 */
+    display: none;
+}
+.baecard img.show{
+    display: block;
+}
+/* 按鈕樣式 */
+.baeactive {
+    margin-top: 20px; /* 圖片和按鈕之間的距離 */
+    text-align: center;
+}
+
+/* 按鈕設計 */
+#baemove {
+    position: relative;
+    top: 40%;
+    width: 300px;
+    font-size: 2.5em;
+    letter-spacing: 8px;
+    cursor: pointer;
+    background-color: #A64231;
+    color: #F0D692;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* 按鈕鼠標懸停效果 */
+#baemove:hover {
+    background-color: gold;
+    color: red;
+}
+
+  
+  .baecard-animating {
+    /* Temporary animation styles */
+    animation: shake 0.5s infinite; /* Example animation */
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    /* ... */
+    100% { transform: translate(1px, -1px) rotate(1deg); }
+  }
+.buashow{
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 32.5%;
+}
+.buashow .shinne{
+    display: none;
+}
+.buashow .shinne.show{
+    display: block;
+    width: 1400px;
+    position: absolute;
+    z-index: 0;
+    left: -51%;
+    top: -7%; 
+}
+.buashow .shinne.show img{
+    width: 100%;
+    animation: rollmove 6s linear infinite;
+}
+.baestyle{
+    display: none;
+    position: relative;
+    max-width: 700px;
+    top: -20%;
+}
+.baestyle .spotright{
+    position: absolute;
+    z-index: 11;
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: -10%;
+}
+.baestyle .spotleft{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 11;
+    top: 50%;
+    left: -10%;
+}
+.baestyle img{
+    width: 100%;
+}
+.baestyle .smile{
+    display: none;
+}
+.baestyle .sant{
+    display: none;
+}
+.baestyle .nono{
+    display: none;
+}
+.baestyle .smile.show{
+    display: block;
+}
+.baestyle .sant.show{
+    display: block;
+}
+.baestyle .nono.show{
+    display: block;
+}
+.baestyle.show{
+    display: block;
+}
+.checkDraw{
+    position: absolute;
+    background-color: #A64231;
+    color: white;
+    width: 300px;
+    height: 60px;
+    font-size: 1.8rem;
+    margin: auto;
+    outline-style: none;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #A64231;
+    bottom: 6%;
+    left: 28.5%;
+    cursor: pointer;
+    letter-spacing: 4px;
+
+}
+.checkDraw:hover{
+    background-color: #F0D692;
+    color: #A64231;
+    border-color: #F0D692;
+
+}
+
+@media screen and (max-width:1440px) {
+    
+}
+@media screen and (max-width: 1024px) {
+    .draw{
+        left: 16%;
+    }
+    .buashow{
+        left: 17%;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 980px) {
+    #draw{
+        justify-content: center;
+    }
+    .draw{
+        left: 0;
+        width: 450px;
+        height: 300px;
+    }
+    .mazu{
+        width: 420px;
+        left: 22%;
+    }
+    .baecard.show{
+        top: 15%;
+    }
+    .baeactive{
+        margin-top: 0;
+    }
+    #baemove{
+        top: 0;
+        font-size: 2rem;
+    }
+    .buashow{
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+    }
+    .buashow .shinne.show{
+        display: block;
+        height: 400px;
+    }
+    .baestyle.show{
+        margin: auto;
+    }
+    .checkDraw{
+        left: 30%;
+    }
+}
+@media screen and (max-width:680px) {
+    #draw{
+        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
+    }
+    .draw{
+        width: 300px;
+        height: 250px;
+    }
+    .baecard img{
+        width: 150px;
+    }
+    .mazu{
+       display: none;
+    }
+    #baemove{
+        font-size: 1.4rem;
+        width: 200px;
+        top: 15px;
+    }
+    .buashow{
+        left: 0;
+        top: 20%;
+    }
+    .buashow .shinne.show{
+        width: 400px;
+        top: 40%;
+        left: -5%;
+    }
+    .checkDraw{
+        font-size: 1.4rem;
+        width: 250px;
+        left: 20.5%;
+    }
+    .baestyle .spotright {
+        position: absolute;
+        z-index: 11;
+        width: 140px;
+        height: 140px;
+        top: 18%;
+        right: 25px;
+    }
+    .baestyle .spotleft{
+        width: 120px;
+        height: 120px;
+        z-index: 11;
+        top: 50%;
+        left: 0;
+    }
+}
+/*  看籤 */
+.messagePannel{
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/draw/P4-背景.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.rollbook{
+    position: absolute;
+    max-width: 100%;
+    top: 44.5%;
+    /* left: 1.5%; */
+    background-image: url('/assets/showmessage/P9-捲軸.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row-reverse;
+    
+    justify-content: center;
+    align-items: center;
+}
+.rollbook p{
+    writing-mode:vertical-rl;
+    height: 150px;
+    color: #53606D;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+.rollbook h4{
+    writing-mode:vertical-lr;
+    color: #A64231;
+    font-size: 2rem;
+    letter-spacing: 6px;
+}
+.shareBtn{
+    position: absolute;
+    bottom: 18%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#shareBtn{
+    width: 400px;
+    color: #f7f7f7;
+    background-color: #A64231;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50px;
+    outline-style: none;
+    border-style: solid;
+    border-color: #A64231;
+    padding: 4px;
+    cursor: pointer;
+}
+#shareBtn:hover{
+    background-color: #F0D692;
+    color: #A64231;
+}
+@media screen and (max-width:1440px) {
+    
+}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 980px) {
+    .messagePannel{
+        background-image: url('/assets/lot/手機版-有媽祖的背景.png');
+    }
+    .rollbook{
+        top: 50%;
+        left: 15%;
+        width: 70%;
+        height: 200px;
+        background-image: url('/assets/temple/P3-捲軸.png');
+    }
+    .rollbook h4{
+        font-size: 1.4rem;
+    }
+    .rollbook p{
+        font-size: 0.995rem;
+        height: 100px;
+    }
+}
+@media screen and (max-width:680px) {
+    .messagePannel{
+        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
+        background-size: cover;
+    }
+    .rollbook{
+        width: 400px;
+        height: 400px;
+        top: 40%;
+        left: 2.5%;
+        background-image: url('/assets/showmessage/手機版-籤詩卷軸_直.png');
+        background-position: center;
+        background-size: contain;
+        z-index: 99;
+        flex-direction: column;
+        writing-mode: inherit;
+    }
+    .rollbook h4{
+        writing-mode: inherit;
+        padding-bottom: 20px;
+    }
+    .rollbook p{
+        width: 300px;
+        margin: 0 auto;
+        writing-mode: inherit;
+        text-align: justify;
+    }
+    .shareBtn{
+        bottom: 12%;
+    }
+    #shareBtn{
+        width: 300px;
+        font-size: 0.975em;
+        padding: 4px 6px;
+    }
+}
+@keyframes rollmove{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes upanddown {
+    0%{
+        transform: translateY(10%);
+    }
+    100%{
+        transform: translateY(-10%);
+    }
+  }
+  @keyframes bringbring{
+    0%{
+      opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
