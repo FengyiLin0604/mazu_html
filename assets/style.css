@@ -1626,8 +1626,12 @@ body {
     }
     .rollbook{
         left: 0;
+        top: 35%;
     }
     .rollbook p{
         width: 320px;
+    }
+    .shareBtn{
+        bottom: 25%;
     }
 }
