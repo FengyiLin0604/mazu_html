@@ -807,7 +807,7 @@ body {
     .templeWrap{
         flex-direction: column;
         align-items: center;
-        top: 18.8%;
+        top: 10%;
     }
     .temple .map img{
         width: 300px;
@@ -829,7 +829,9 @@ body {
     }
     .templeintro .templeintro-wrapper .introContent{
         max-width: 280px;
-        width: 280px;
+        height: 200px;
+        padding: 10px 20px;
+        /* width: 280px; */
         /* height: 250px; */
     }
     .templeintro .templeintro-wrapper a{
