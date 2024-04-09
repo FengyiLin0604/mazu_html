@@ -1330,6 +1330,9 @@ body {
         top: 70%;
     
     }
+    .picklot::before{
+        right: -10%;
+    }
     #lots .ear{
         top: 30%;
         right: 0;
