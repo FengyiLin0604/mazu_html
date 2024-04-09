@@ -728,18 +728,14 @@ body {
 }
 
   
-  /* .baecard-animating {
-    /* Temporary animation styles */
-    animation: shake 0.5s infinite; /* Example animation */
-  } */
-  
-  /* @keyframes shake {
+   /* @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    /* ... */
+    
     100% { transform: translate(1px, -1px) rotate(1deg); }
   } */
 .buashow{
+    display: none;
     position: absolute;
     text-align: center;
     top: 10%;
@@ -1541,7 +1537,7 @@ body {
         top: -2px;
         left:0;
     }
-    .buashow{
+    .buashow.show{
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -1613,9 +1609,9 @@ body {
         background-image: url('/assets/draw/425x800-求籤畫面.jpg');
     }
     .draw{
-        top: 40%;
-        width: 250px;
-        height: 250px;
+        top: 50%;
+        width: 200px;
+        height: 200px;
     }
     #baemove{
         top: -60%;
