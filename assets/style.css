@@ -1587,17 +1587,7 @@ body {
     }
     .picklot{
         top: 60%;
-        right: 5%;
-    }
-    .picklot span{
-        writing-mode: vertical-lr;
-        padding: 10px 4px;
-        text-align: center;
-        border-radius: 50px;
-        background-color: #A64231;
-        color: #f7f7f7;
-        font-size: 1.2rem;
-        letter-spacing: 8px;
+        right: 10%;
     }
     #lots .ear{
         width: 30%;
