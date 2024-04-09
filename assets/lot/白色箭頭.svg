@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613.86 552.34">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        stroke-width: 0px;
-      }
-    </style>
-  </defs>
-  <polygon class="cls-1" points="613.86 295.12 613.86 64.44 254.01 64.44 254.01 0 0 179.58 254.01 359.16 254.01 295.12 383.18 295.12 383.18 552.34 613.86 552.34 613.86 295.12 613.86 295.12"/>
-</svg>
+<svg data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613.86 552.34"><path style="fill:#fff;stroke-width:0" d="M613.86 295.12V64.44H254.01V0L0 179.58l254.01 179.58v-64.04h129.17v257.22h230.68V295.12z"/></svg>

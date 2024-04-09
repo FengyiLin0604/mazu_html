@@ -364,7 +364,7 @@ console.log(baecards);
       hideAllCards(); // 隱藏所有圖片
       const randomCard = getRandomElement(baecards);
       randomCard.classList.add('show'); // 隨機顯示一張圖片
-    }, 50); // 每100毫秒切換一次
+    }, 500); // 每100毫秒切換一次
 
     // 設定三秒後停止切換
     setTimeout(() => {
@@ -432,9 +432,8 @@ console.log(baecards);
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
         // console.log(buashow);
         buashow.classList.add('show');
-        // showshinne.classList.add('show');
         nono.classList.add('show');
-        buashow.appendChild(reDrawbuttonObject('請重新擲筊'));
+        buashow.appendChild(reDrawbuttonObject('重新抽籤詩'));
       }
         console.log(temprandom);
         // showdraw();
@@ -444,7 +443,7 @@ console.log(baecards);
         hideAllCards(); // 隱藏所有圖片
         const randomCard = getRandomElement(baecards);
         randomCard.classList.add('show'); // 隨機顯示一張圖片
-      }, 50); // 每100毫秒切換一次
+      }, 200); // 每100毫秒切換一次
 
     setTimeout(() => {
         // clearInterval(intervalId);
@@ -506,7 +505,7 @@ function resetbackground(){
     shinne.classList.remove('show');
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
-    if(window.innerWidth>1440){
+    if(window.innerWidth>=1440){
         drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
     }else if(window.innerWidth >768){
         drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
@@ -537,8 +536,10 @@ function reDrawbuttonObject(textContent){
             var drawear = document.querySelector('.ear');
             draweye.setAttribute('style','display:block')
             drawear.setAttribute('style','display:block')
+        }else if(textContent==='重新抽籤詩'){
+            window.location.href="/lots.html";
         }else{
-            window.location.href="/showmessage.html";
+            window.location.href="/showmessage.html"
         }
         console.log('click');
     });
@@ -568,7 +569,9 @@ if(tashi){
         console.log('movein');
         var tashiimg = tashi.querySelector('img');
         tashiimg.classList.add('show');
+        // openDialog('tashi');
         showtemplelist('tashi');
+        
     });
     tashi.addEventListener('mouseleave',function(e){
         console.log('moveout');
@@ -578,6 +581,7 @@ if(tashi){
     tashi.addEventListener('click',function(e){
         var tashiimg = tashi.querySelector('img');
         tashiimg.classList.add('show');
+        // openDialog('tashi');
         showtemplelist('tashi');
     });
 }
@@ -586,6 +590,7 @@ if(newhouse){
         console.log('movein');
         var newhouseimg = newhouse.querySelector('img');
         newhouseimg.classList.add('show');
+        // openDialog('newhouse');
         showtemplelist('newhouse');
     });
     newhouse.addEventListener('mouseleave',function(e){
@@ -596,6 +601,7 @@ if(newhouse){
     newhouse.addEventListener('click',function(e){
         var newhouseimg = newhouse.querySelector('img');
         newhouseimg.classList.add('show');
+        // openDialog('newhouse');
         showtemplelist('newhouse');
     });
 }
@@ -603,6 +609,7 @@ if(zhongli){
     zhongli.addEventListener('mouseenter',function(e){
         var zhongliimg = zhongli.querySelector('img');
         zhongliimg.classList.add('show');
+        // openDialog('zhongli');
         showtemplelist('zhongli');
     });
     zhongli.addEventListener('mouseleave',function(e){
@@ -612,6 +619,7 @@ if(zhongli){
     zhongli.addEventListener('click',function(e){
         var zhongliimg = zhongli.querySelector('img');
         zhongliimg.classList.add('show');
+        // openDialog('zhongli');
         showtemplelist('zhongli');
     });
 }
@@ -619,6 +627,7 @@ if(taoyuan){
     taoyuan.addEventListener('mouseenter',function(e){
         var taoyuanimg = taoyuan.querySelector('img');
         taoyuanimg.classList.add('show');
+        // openDialog('taoyuan');
         showtemplelist('taoyuan');
     });
     taoyuan.addEventListener('mouseleave',function(e){
@@ -628,6 +637,7 @@ if(taoyuan){
     taoyuan.addEventListener('click',function(e){
         var taoyuanimg = taoyuan.querySelector('img');
         taoyuanimg.classList.add('show');
+        // openDialog('taoyuan');
         showtemplelist('taoyuan');
     });
 }
@@ -635,6 +645,7 @@ if(taoyuanbig){
     taoyuanbig.addEventListener('mouseenter',function(e){
         var taoyuanimg = taoyuan.querySelector('img');
         taoyuanimg.classList.add('show');
+        // openDialog('taoyuanbig');
         showtemplelist('taoyuanbig');
     });
     taoyuanbig.addEventListener('mouseleave',function(e){
@@ -644,6 +655,7 @@ if(taoyuanbig){
     taoyuanbig.addEventListener('click',function(e){
         var taoyuanimg = taoyuanbig.querySelector('img');
         taoyuanimg.classList.add('show');
+        // openDialog('taoyuanbig');
         showtemplelist('taoyuanbig');
     });
 }
@@ -658,6 +670,7 @@ if(m_tashi){
     m_tashi.addEventListener('click',function(e){
         canelAllSelect();
         m_tashi.classList.add('actived');
+        // openDialog('tashi');
         showtemplelist('tashi');
     });
 }
@@ -665,6 +678,7 @@ if(m_newhouse){
     m_newhouse.addEventListener('click',function(e){
         canelAllSelect();
         m_newhouse.classList.add('actived');
+        // openDialog('newhouse');
         showtemplelist('newhouse');
     });
 }
@@ -672,6 +686,7 @@ if(m_zhongli){
     m_zhongli.addEventListener('click',function(e){
         canelAllSelect();
         m_zhongli.classList.add('actived');
+        // openDialog('zhongli');
         showtemplelist('zhongli');
     });
 }
@@ -679,6 +694,7 @@ if(m_taoyuan){
     m_taoyuan.addEventListener('click',function(e){
         canelAllSelect();
         m_taoyuan.classList.add('actived');
+        // openDialog('taoyuan');
         showtemplelist('taoyuan');
     });
 }
@@ -686,6 +702,7 @@ if(m_taoyuanbig){
     m_taoyuanbig.addEventListener('click',function(e){
         canelAllSelect();
         m_taoyuanbig.classList.add('actived');
+        // openDialog('taoyuanbig');
         showtemplelist('taoyuanbig');
     });
 }
@@ -699,6 +716,8 @@ function showtemplelist(areaid){
                 templetitle.textContent =element.templeName;
                 templecotent.textContent = element.activeDate + element.activeContent;
                 templeimage.setAttribute('src',element.image_url);
+                localStorage.setItem('choosetemp',areaid);
+                document.cookie = 'choosetemp=' + areaid;
             }
         // console.log(element.templeName);
       });
@@ -729,6 +748,11 @@ function ckpage(){
     if(messagepage){
         console.log(localStorage.getItem('lotName'));
         console.log(localStorage.getItem('sant'));
+        var choosetemp = document.cookie.replace('choosetemp=','');
+
+        console.log(choosetemp);
+
+        openDialog(choosetemp);
         setMessage();
     }else{
         console.log('Not Message Page');
@@ -741,3 +765,36 @@ function setMessage(){
     LotExplain.textContent = localStorage.getItem('lotContentExplain')
 }
 ckpage();
+function openDialog(area){
+    var tempactivedialog = document.querySelector('.tempactivedialog');
+    tempactivedialog.classList.add('actived');
+    resetDialog()
+    console.log(area);
+    var showing_area = tempactivedialog.querySelector("#" + area);
+    showing_area.classList.add('actived');
+}
+
+function resetDialog(){
+    var dialogContent = document.querySelectorAll('.dialog-content');
+    dialogContent.forEach(element=>{
+        element.classList.remove('actived');
+    });
+}
+const dialogClose = document.querySelector('.dialogClose');
+if(dialogClose){
+    dialogClose.addEventListener('click',function(e){
+        var tempactivedialog = document.querySelector('.tempactivedialog');
+        tempactivedialog.classList.remove('actived');
+    });
+}
+
+
+
+
+const shareBtn = document.querySelector('#shareBtn');
+if(shareBtn){
+    shareBtn.addEventListener('click',function(e){
+        window.location.href="https://st-url.com/瘋媽祖粉專貼文連結";
+    });
+}
+
