@@ -1850,9 +1850,15 @@ body {
         height: 100px;
         left: 0;
     }
+    .lots{
+        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
     .lotcontent {
         left: 15%;
-        top: 45%;
+        top: 30%;
     }
     .lot-can{
         top: 13%;
@@ -1874,8 +1880,9 @@ body {
         background-image: url('/assets/draw/425x800-求籤畫面.jpg');
     }
     .draw{
-        width: 300px;
-        height: 300px;
+        top: 40%;
+        width: 250px;
+        height: 250px;
     }
     #baemove{
         top: -60%;

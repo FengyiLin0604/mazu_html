@@ -506,7 +506,7 @@ function resetbackground(){
     shinne.classList.remove('show');
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
-    if(window.innerWidth<=1440){
+    if(window.innerWidth>1440){
         drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
     }else if(window.innerWidth >768){
         drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
@@ -557,6 +557,7 @@ function getmessage(){
 
 }
 /* 地圖 */
+//desktop
 const tashi = document.querySelector('.tashi');
 const newhouse = document.querySelector('.newhouse');
 const zhongli = document.querySelector('.zhongli');
@@ -574,6 +575,11 @@ if(tashi){
         var tashiimg = tashi.querySelector('img');
         tashiimg.classList.remove('show');
     });
+    tashi.addEventListener('click',function(e){
+        var tashiimg = tashi.querySelector('img');
+        tashiimg.classList.add('show');
+        showtemplelist('tashi');
+    });
 }
 if(newhouse){
     newhouse.addEventListener('mouseenter',function(e){
@@ -587,6 +593,11 @@ if(newhouse){
         var newhouseimg = newhouse.querySelector('img');
         newhouseimg.classList.remove('show');
     });
+    newhouse.addEventListener('click',function(e){
+        var newhouseimg = newhouse.querySelector('img');
+        newhouseimg.classList.add('show');
+        showtemplelist('newhouse');
+    });
 }
 if(zhongli){
     zhongli.addEventListener('mouseenter',function(e){
@@ -597,6 +608,11 @@ if(zhongli){
     zhongli.addEventListener('mouseleave',function(e){
         var zhongliimg = zhongli.querySelector('img');
         zhongliimg.classList.remove('show');
+    });
+    zhongli.addEventListener('click',function(e){
+        var zhongliimg = zhongli.querySelector('img');
+        zhongliimg.classList.add('show');
+        showtemplelist('zhongli');
     });
 }
 if(taoyuan){
@@ -609,6 +625,11 @@ if(taoyuan){
         var taoyuanimg = taoyuan.querySelector('img');
         taoyuanimg.classList.remove('show');
     });
+    taoyuan.addEventListener('click',function(e){
+        var taoyuanimg = taoyuan.querySelector('img');
+        taoyuanimg.classList.add('show');
+        showtemplelist('taoyuan');
+    });
 }
 if(taoyuanbig){
     taoyuanbig.addEventListener('mouseenter',function(e){
@@ -619,6 +640,43 @@ if(taoyuanbig){
     taoyuanbig.addEventListener('mouseleave',function(e){
         var taoyuanimg = taoyuan.querySelector('img');
         taoyuanimg.classList.remove('show');
+    });
+    taoyuanbig.addEventListener('click',function(e){
+        var taoyuanimg = taoyuanbig.querySelector('img');
+        taoyuanimg.classList.add('show');
+        showtemplelist('taoyuanbig');
+    });
+}
+
+//mobile
+const m_tashi = document.querySelector('.mapmobile .tashi');
+const m_newhouse = document.querySelector('.mapmobile .newhouse');
+const m_zhongli = document.querySelector('.mapmobile .zhongli');
+const m_taoyuan = document.querySelector('.mapmobile .taoyuan');
+const m_taoyuanbig = document.querySelector('.mapmobile .taoyuanbig');
+if(m_tashi){
+    m_tashi.addEventListener('click',function(e){
+        showtemplelist('tashi');
+    });
+}
+if(m_newhouse){
+    m_newhouse.addEventListener('click',function(e){
+        showtemplelist('newhouse');
+    });
+}
+if(m_zhongli){
+    m_zhongli.addEventListener('click',function(e){
+        showtemplelist('zhongli');
+    });
+}
+if(m_taoyuan){
+    m_taoyuan.addEventListener('click',function(e){
+        showtemplelist('taoyuan');
+    });
+}
+if(m_taoyuanbig){
+    m_taoyuanbig.addEventListener('click',function(e){
+        showtemplelist('taoyuanbig');
     });
 }
 function showtemplelist(areaid){
