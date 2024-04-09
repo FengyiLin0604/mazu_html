@@ -489,11 +489,16 @@ function changedrawbackground(){
     var drawback = document.querySelector('#draw');
     var mazu = document.querySelector('.mazu');
     var draw = document.querySelector('.draw');
-    if(window.innerWidth > 769){
-        drawback.setAttribute('style','background-image:url("/assets/temple/地圖背景.jpg")');
+    if(window.innerWidth > 768){
+        // drawback.setAttribute('style','background-image:url("/assets/temple/地圖背景.jpg")');
         console.log('1' + window.innerWidth);
     }else{
-        drawback.setAttribute('style','background-image:url("/assets/lot/手機版杯型顯示.png")');
+        if(window.innerWidth>680){
+            drawback.setAttribute('style','background-image:url("/assets/temple/768x1080-求籤畫面V2.jpg")');
+        }else{
+            drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
+        }
+       
         console.log('2' + window.innerWidth);
     }
     // mazu.setAttribute('style','display:none;');
@@ -512,7 +517,7 @@ function resetbackground(){
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
     if(window.innerWidth>767){
-        drawback.setAttribute('style','background-image:url("/assets/draw/P4-背景.jpg")');
+        drawback.setAttribute('style','background-image:url("/assets/lot/768x1080-求籤畫面.jpg")');
     }else{
         drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
     }

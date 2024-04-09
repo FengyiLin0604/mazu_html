@@ -15,7 +15,10 @@ body {
     max-height: 100vh; /* 视窗的高度 */
     width: 100vw;
     height: 100vh;
+    touch-action: manipulation;
+    touch-action: none;
     overflow: hidden; /* 隐藏溢出的内容 */
+    overflow-y: scroll;
 }
 /*  首頁 */
 .container{
@@ -107,7 +110,7 @@ body {
         height: 100%;
     }
     .introduce{
-        bottom: 4%;
+        bottom: 5%;
     }
     .introduce .starttodraw a{
         padding: 8px 70px;
@@ -530,12 +533,12 @@ body {
 }
 @media screen and (max-width:1440px) {
     .temple{
-        background-image: url('/assets/temple/1440x1920-選廟地圖.jpg');
+        background-image: url('/assets/temple/1440x1080-選廟地圖.jpg');
     }
 }
 @media screen and (max-width: 1024px) {
     .temple{
-        background-image: url('/assets/temple/1024x1920-選廟地圖.jpg');
+        background-image: url('/assets/temple/1024x1080-選廟地圖.jpg');
     }
     .templeWrap{
         top: 17%;
@@ -603,9 +606,9 @@ body {
     }
     
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
     .temple{
-        background-image: url('/assets/temple/768x1334-選廟地圖.jpg');
+        background-image: url('/assets/temple/768x1080-選廟地圖.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -802,6 +805,11 @@ body {
     .temple .map img{
         width: 300px;
     }
+
+    .temple .map span:hover{
+        color: #f7f7f7;
+        background-color: #A64231;
+    }
     .templeintro .templeintro-wrapper h3{
         width: 300px;
         font-size: 1.2rem;
@@ -832,6 +840,12 @@ body {
         padding-left: 12px;
         font-size: .775rem;
         border-radius: 50px;
+        color: rgba(255,255,255,0) ;
+        background-color: rgba(255,255,255,0);
+    }
+    .temple .map .newhouse span:hover{
+        color: #f7f7f7;
+        background-color: #A64231;
     }
     .temple .map .newhouse span::before{
         left: 45%;
@@ -855,6 +869,12 @@ body {
         padding: 4px 6px;
         padding-left: 12px;
         font-size: .775rem;
+        color: rgba(255,255,255,0) ;
+        background-color: rgba(255,255,255,0);
+    }
+    .temple .map .tashi span:hover{
+        color: #f7f7f7;
+        background-color: #A64231;
     }
     .temple .map .tashi img.show{
         width: 80px;
@@ -870,6 +890,12 @@ body {
         padding: 4px 6px;
         padding-left: 12px;
         font-size: .775rem;
+        color: rgba(255,255,255,0) ;
+        background-color: rgba(255,255,255,0);
+    }
+    .temple .map .zhongli span:hover{
+        color: #f7f7f7;
+        background-color: #A64231;
     }
     .temple .map .zhongli span::before{
         left: -8%;
@@ -894,6 +920,12 @@ body {
         padding: 4px 6px;
         padding-left: 12px;
         font-size: .775rem;
+        color: rgba(255,255,255,0) ;
+        background-color: rgba(255,255,255,0);
+    }
+    .temple .map .taoyuan span:hover{
+        color: #f7f7f7;
+        background-color: #A64231;
     }
     .temple .map .taoyuan img.show{
         width: 50px;
@@ -908,7 +940,16 @@ body {
         padding: 4px 6px;
         padding-left: 12px;
         font-size: .775rem;
+        color: rgba(255,255,255,0) ;
+        background-color: rgba(255,255,255,0);
     }
+    .temple .map .taoyuanbig span:hover{
+        width: 140px;
+        font-size: .875rem;
+        color: #f7f7f7;
+        background-color: #A64231;
+    }
+
 }
 /*  抽籤 */
 .lots{
@@ -1077,7 +1118,7 @@ body {
 
 }
 .picklot::before {
-    content: url(http://127.0.0.1:5173/assets/lot/白色箭頭.svg);
+    content: url('/assets/lot/白色箭頭.svg');
     width: 30px;
     height: 30px;
     position: absolute;
@@ -1098,7 +1139,7 @@ body {
 }
 @media screen and (max-width:1440px) {
     .lots{
-        background-image: url('/assets/lot/1440x1920-求籤畫面.jpg');
+        background-image: url('/assets/lot/1440x1080-求籤畫面.jpg');
     }
     .picklot{
         display: none;
@@ -1106,7 +1147,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
     .lots{
-        background-image: url('/assets/lot/1024x1920-求籤畫面.jpg');
+        background-image: url('/assets/lot/1024x1080-求籤畫面.jpg');
     }
     .lotcontent{
         left: 31.5%;
@@ -1128,6 +1169,7 @@ body {
     }
     .lotcontent{
         left: 31%;
+        top: 55%;
     }
     .lotcontent.active{
         width: 300px;
@@ -1230,7 +1272,7 @@ body {
 #draw{
     width: 100vw;
     height: 100vh;
-    background-image: url('/assets/draw/P4-背景.jpg');
+    background-image: url('/assets/1440x1080-起始畫面.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1341,7 +1383,7 @@ body {
     display: none;
 }
 .buashow .shinne.show{
-    display: block;
+    display: none;
     width: 1400px;
     position: absolute;
     z-index: 0;
@@ -1424,20 +1466,30 @@ body {
 }
 
 @media screen and (max-width:1440px) {
+    .draw{
+        left: 25%;
+    }
+    #draw{
+        background-image: url('/assets/draw/1440x1080-求籤畫面.jpg');
+    }
     
 }
 @media screen and (max-width: 1024px) {
     .draw{
         left: 16%;
     }
+    #draw{
+        background-image: url('/assets/lot/1024x1080-求籤畫面.jpg');
+    }
     .buashow{
         left: 17%;
         overflow: hidden;
     }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 768px) {
     #draw{
         justify-content: center;
+        background-image: url('/assets/draw/768x1080-求籤畫面.jpg');
     }
     .draw{
         left: 0;
@@ -1459,13 +1511,13 @@ body {
         font-size: 2rem;
     }
     .buashow{
-        top: 0;
+        top: 20%;
         left: 0;
         margin: auto;
         width: 100%;
     }
     .buashow .shinne.show{
-        display: block;
+        display: none;
         height: 400px;
     }
     .baestyle.show{
@@ -1475,9 +1527,10 @@ body {
         left: 30%;
     }
 }
-@media screen and (max-width:680px) {
+@media screen and (max-width:680) {
     #draw{
-        background-image: url('/assets/lot/425x800-求籤畫面.jpg');
+        justify-content: center;
+        background-image: url('/assets/draw/425x800-求籤畫面.jpg');
     }
     .draw{
         width: 300px;
@@ -1502,6 +1555,7 @@ body {
         width: 400px;
         top: 40%;
         left: -5%;
+        display: none;
     }
     .checkDraw{
         font-size: 1.4rem;
@@ -1594,24 +1648,38 @@ body {
 @media screen and (max-width:1440px) {
     
 }
-@media screen and (max-width: 1024px) {}
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1024px) {
+    .rollbook{
+        top: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
     .messagePannel{
         background-image: url('/assets/lot/手機版-有媽祖的背景.png');
     }
     .rollbook{
-        top: 50%;
-        left: 15%;
-        width: 70%;
-        height: 200px;
-        background-image: url('/assets/temple/P3-捲軸.png');
+        top: 42%;
+        left: 17%;
+        width: 500px;
+        height: 500px;
+        background-image: url('/assets/showmessage/手機版-籤詩卷軸_直.png');
+        flex-direction: column;
+        writing-mode: inherit;
     }
     .rollbook h4{
-        font-size: 1.4rem;
+        writing-mode: inherit;
+        padding-bottom: 20px;
     }
     .rollbook p{
-        font-size: 0.995rem;
-        height: 100px;
+        width: 340px;
+        margin: 0 auto;
+        writing-mode: inherit;
+        text-align: justify;
+        height: 200px;
+
+    }
+    .shareBtn{
+        bottom: 10%;       
     }
 }
 @media screen and (max-width:680px) {
