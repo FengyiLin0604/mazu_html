@@ -1573,6 +1573,9 @@ body {
         left: 15%;
         top: 35%;
     }
+    .lotcontent.active{
+        width: 320px;
+    }
     .lotcontent .bodycenter{
         justify-content: center;
     }
