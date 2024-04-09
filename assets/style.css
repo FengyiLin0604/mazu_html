@@ -17,8 +17,8 @@ body {
     height: 100vh;
     touch-action: manipulation;
     touch-action: none;
-    overflow: hidden;
-    /* overflow-y: scroll; */
+    /* overflow: hidden; */
+    overflow-y: scroll;
 }
 /*  首頁 */
 .container{
@@ -91,14 +91,14 @@ body {
     .ear{
         width: 200px;
         top: 20%;
-        right: 0;
+        right: 35px;
         animation: upanddown 1s linear infinite;
     }
     .eyes{
         /* left: -64px; */
         width: 200px;
         top:20%;
-        left: 0;
+        left: 35px;
         animation: upanddown 1s linear infinite;
     }
 }
@@ -122,6 +122,31 @@ body {
     .eyes{
         width: 150px;
         top: 30%;
+    }
+}
+@media screen and (max-width:425px){
+    .container{
+        background-image: url("/assets/homepage/425x800-起始畫面.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        background-attachment: fixed;
+    }
+    .container img{
+        display: none;
+    }
+    .introduce{
+        bottom: 26%;
+    }
+    .ear{
+        right: -5%;
+    }
+    .eyes{
+        left: -5%;
+    }
+    .introduce .starttodraw a {
+        padding: 4px 50px;
+        font-size: 1.2rem;
     }
 }
 @media screen and (max-width:390px){
@@ -999,7 +1024,7 @@ body {
 .lot-can{
     position: relative;
     max-width: 300px;
-    top: 2.5%;
+    top: 4%;
     margin: auto;
     z-index: 999;
 }
@@ -1397,7 +1422,7 @@ body {
     display: none;
 }
 .buashow .shinne.show{
-    display: none;
+    display: block;
     width: 1400px;
     position: absolute;
     z-index: 0;
@@ -1507,8 +1532,8 @@ body {
     }
     .draw{
         left: 0;
-        width: 450px;
-        height: 300px;
+        width: 250px;
+        height: 150px;
     }
     .mazu{
         width: 420px;
@@ -1517,13 +1542,21 @@ body {
     .baecard.show{
         top: 15%;
     }
+    .baecard img{
+        width: 200px;
+    }
+    .baecard img.show{
+        width: 200px;
+    }
     .baeactive{
         margin-top: 0;
     }
     #baemove{
         top: 0;
         font-size: 2rem;
+        width: 200px;
     }
+    
     .buashow{
         top: 20%;
         left: 0;
@@ -1531,8 +1564,9 @@ body {
         width: 100%;
     }
     .buashow .shinne.show{
-        display: none;
+        display: block;
         height: 400px;
+        left: -45%;
     }
     .baestyle.show{
         margin: auto;
@@ -1541,7 +1575,29 @@ body {
         left: 30%;
     }
 }
-@media screen and (max-width:680) {
+@media screen and (max-width:425px){
+    .buashow .shinne.show{
+        display: block;
+        /* height: 400px; */
+        left: -35%;
+        width: 700px;
+        top: 10%;
+    }
+    .baestyle .spotright{
+        width: 100px;
+        height: 100px;
+        right: 0;
+    }
+    .baestyle .spotleft{
+        width: 100px;
+        height: 100px;
+        left: 0;
+    }
+    .checkDraw{
+        left: 15%;
+    }
+}
+@media screen and (max-width:390px) {
     #draw{
         justify-content: center;
         background-image: url('/assets/draw/425x800-求籤畫面.jpg');
@@ -1566,27 +1622,29 @@ body {
         top: 20%;
     }
     .buashow .shinne.show{
-        width: 400px;
-        top: 40%;
-        left: -5%;
-        display: none;
+        display: block;
+        /* height: 400px; */
+        left: -42%;
+        width: 700px;
+        top: 10%;
     }
     .checkDraw{
         font-size: 1.4rem;
         width: 250px;
-        left: 20.5%;
+        left: 17%;
     }
     .baestyle .spotright {
         position: absolute;
         z-index: 11;
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
         top: 18%;
-        right: 25px;
+        right: 0;
     }
     .baestyle .spotleft{
-        width: 120px;
-        height: 120px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
         z-index: 11;
         top: 50%;
         left: 0;
@@ -1696,7 +1754,7 @@ body {
         bottom: 10%;       
     }
 }
-@media screen and (max-width:680px) {
+@media screen and (max-width:390px) {
     .messagePannel{
         background-image: url('/assets/lot/425x800-求籤畫面.jpg');
         background-size: cover;
@@ -1715,13 +1773,16 @@ body {
     }
     .rollbook h4{
         writing-mode: inherit;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .rollbook p{
         width: 300px;
         margin: 0 auto;
         writing-mode: inherit;
         text-align: justify;
+        font-size: 1.1rem;
+        padding: 0 4px;
     }
     .shareBtn{
         bottom: 12%;

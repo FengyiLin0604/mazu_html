@@ -391,6 +391,10 @@ console.log(baecards);
         var buashow = document.querySelector('.buashow');
         var showshinne = document.querySelector('.shinne');
         var baestyle = document.querySelector('.baestyle');
+        var draweye = document.querySelector('.eyes');
+        var drawear = document.querySelector('.ear');
+        draweye.setAttribute('style','display:none')
+        drawear.setAttribute('style','display:none')
         baestyle.classList.add('show');
         var smile = baestyle.querySelector('.baestyle .smile');//笑杯
         var sant = baestyle.querySelector('.baestyle .sant');//聖杯
@@ -405,7 +409,11 @@ console.log(baecards);
         var buashow = document.querySelector('.buashow');
         var showshinne = document.querySelector('.shinne');
         var baestyle = document.querySelector('.baestyle');
-        baestyle.classList.add('show');
+        var draweye = document.querySelector('.eyes');
+        var drawear = document.querySelector('.ear');
+        draweye.setAttribute('style','display:none')
+        drawear.setAttribute('style','display:none')
+
         var smile = baestyle.querySelector('.baestyle .smile');//笑杯
         var sant = baestyle.querySelector('.baestyle .sant');//聖杯
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
@@ -421,6 +429,10 @@ console.log(baecards);
         var showshinne = document.querySelector('.shinne');
         var baestyle = document.querySelector('.baestyle');
         baestyle.classList.add('show');
+        var draweye = document.querySelector('.eyes');
+        var drawear = document.querySelector('.ear');
+        draweye.setAttribute('style','display:none')
+        drawear.setAttribute('style','display:none')
         var smile = baestyle.querySelector('.baestyle .smile');//笑杯
         var sant = baestyle.querySelector('.baestyle .sant');//聖杯
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
@@ -430,29 +442,6 @@ console.log(baecards);
         nono.classList.add('show');
         buashow.appendChild(reDrawbuttonObject('請重新擲筊'));
       }
-        // if(tempSpeciCard===temprandom){
-        //     console.log(buashow);
-        //     buashow.classList.add('show');
-        //     baestyle.classList.add('show');
-        //     showshinne.classList.add('show');
-        //     sant.classList.add('show');      
-        //     buashow.appendChild( reDrawbuttonObject('查看籤詩釋解'));
-        //     localStorage.setItem('sant', 'true');
-        // }
-        // if(tempSmile ===temprandom){
-        //     console.log(buashow);
-        //     buashow.classList.add('show');
-        //     showshinne.classList.add('show');
-        //     smile.classList.add('show');
-        //     buashow.appendChild(reDrawbuttonObject('請重新擲筊'));
-        // }
-        // if(tempNono === temprandom){
-        //     console.log(buashow);
-        //     buashow.classList.add('show');
-        //     showshinne.classList.add('show');
-        //     nono.classList.add('show');
-        //     buashow.appendChild(reDrawbuttonObject('請重新擲筊'));
-        // }
         console.log(temprandom);
         // showdraw();
     }, 3000);
@@ -483,7 +472,10 @@ console.log(baecards);
         localStorage.setItem('sant', 'true');
         localStorage.setItem('lot','');
         console.log('third');
-    
+        var draweye = document.querySelector('.eyes');
+        var drawear = document.querySelector('.ear');
+        draweye.setAttribute('style','display:none')
+        drawear.setAttribute('style','display:none')
     }, 3000);
 
   }
@@ -493,17 +485,20 @@ function changedrawbackground(){
     var drawback = document.querySelector('#draw');
     var mazu = document.querySelector('.mazu');
     var draw = document.querySelector('.draw');
-    if(window.innerWidth > 768){
+    if(window.innerWidth<=1440){
+        drawback.setAttribute('style','background-image:url("/assets/temple/1440x1080-選廟地圖.jpg")');
+    }
+    if(window.innerWidth<=1024){
         drawback.setAttribute('style','background-image:url("/assets/temple/1024x1080-選廟地圖.jpg")');
-        console.log('1' + window.innerWidth);
-    }else{
-        if(window.innerWidth>680){
-            drawback.setAttribute('style','background-image:url("/assets/temple/768x1080-求籤畫面V2.jpg")');
-        }else{
-            drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
-        }
-       
-        console.log('2' + window.innerWidth);
+    }
+    if(window.innerWidth<768){
+        drawback.setAttribute('style','background-image:url("/assets/temple/768x1080-求籤畫面V2.jpg")');
+    }
+    if(window.innerWidth<425){
+        drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
+    }
+    if(window.innerWidth<390){
+        drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
     }
     // mazu.setAttribute('style','display:none;');
     draw.setAttribute('style','display:none;');
