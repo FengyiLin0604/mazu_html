@@ -945,7 +945,7 @@ body {
         display: none;
     }
     .lot-can{
-        top: 17%;
+        top: 5%;
     }
     .draw{
         top: 50%;
@@ -1595,7 +1595,7 @@ body {
     }
     .picklot{
         top: 60%;
-        right: 10px;
+        right: 10%;
     }
     /* .picklot::before{
         right: -50%;
