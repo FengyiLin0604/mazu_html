@@ -1473,6 +1473,9 @@ body {
         top: 15%;
         display: grid;
     }
+    .temple .title span{
+        display: none;
+    }
     .templeintro .templeintro-wrapper{
         left: 0;
     }
@@ -1496,7 +1499,12 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         text-align: center;
         justify-content: center;
-        padding-left: 30px;
+    }
+    .templeone div{
+        background-color: #A64231;
+        border-radius: 30px;
+        color: #f7f7f7;
+        padding: 4px;
     }
     .templeone span{
         font-size: 0.975rem;
@@ -1504,19 +1512,27 @@ body {
         padding-right: 4px;
         position: relative;
     }
-    .templeone span::before{
-        content: url('/assets/temple/P3-地標icon.svg');
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: -15px;
-        left: -20px;
-    }
     .templetwo{
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         justify-content: center;
+    }
+    .templetwo div{
+        background-color: #A64231;
+        border-radius: 30px;
+        color: #f7f7f7;
+        padding: 4px;
+        width: 100%;
+        margin: auto;
+    }
+    .templeone div.actived{
+        background-color: #f7f7f7;
+        color: #A64231;
+    }
+    .templetwo div.actived{
+        background-color: #f7f7f7;
+        color: #A64231;
     }
     .templetwo span{
         font-size: 0.975rem;
@@ -1525,12 +1541,12 @@ body {
         position: relative;
     }
     .templetwo span::before{
-        content: url('/assets/temple/P3-地標icon.svg');
+        /* content: url('/assets/temple/P3-地標icon.svg');
         width: 25px;
         height: 25px;
         position: absolute;
         top: -15px;
-        left: -20px;
+        left: -20px; */
     }
     .introContent{
         margin-bottom: 20px;
@@ -1543,7 +1559,7 @@ body {
         width: 40px;
         height: 40px;
         top: -2px;
-        left:0;
+        left:-16px;
     }
     .buashow.show{
         justify-content: center;

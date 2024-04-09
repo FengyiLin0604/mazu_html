@@ -656,26 +656,36 @@ const m_taoyuan = document.querySelector('.mapmobile .taoyuan');
 const m_taoyuanbig = document.querySelector('.mapmobile .taoyuanbig');
 if(m_tashi){
     m_tashi.addEventListener('click',function(e){
+        canelAllSelect();
+        m_tashi.classList.add('actived');
         showtemplelist('tashi');
     });
 }
 if(m_newhouse){
     m_newhouse.addEventListener('click',function(e){
+        canelAllSelect();
+        m_newhouse.classList.add('actived');
         showtemplelist('newhouse');
     });
 }
 if(m_zhongli){
     m_zhongli.addEventListener('click',function(e){
+        canelAllSelect();
+        m_zhongli.classList.add('actived');
         showtemplelist('zhongli');
     });
 }
 if(m_taoyuan){
     m_taoyuan.addEventListener('click',function(e){
+        canelAllSelect();
+        m_taoyuan.classList.add('actived');
         showtemplelist('taoyuan');
     });
 }
 if(m_taoyuanbig){
     m_taoyuanbig.addEventListener('click',function(e){
+        canelAllSelect();
+        m_taoyuanbig.classList.add('actived');
         showtemplelist('taoyuanbig');
     });
 }
@@ -690,10 +700,17 @@ function showtemplelist(areaid){
                 templecotent.textContent = element.activeDate + element.activeContent;
                 templeimage.setAttribute('src',element.image_url);
             }
-        console.log(element.templeName);
+        // console.log(element.templeName);
       });
 }
-
+function canelAllSelect(){
+    var templeDiv = document.querySelectorAll('.mapmobile div');
+    templeDiv.forEach(element=>{
+        if(element.classList.contains('actived')){
+            element.classList.remove('actived');
+        }
+    });
+}
 function getLots(){
     const index = Math.floor(Math.random() * lotcontent.length);
     const selectedLot = lotcontent[index];
