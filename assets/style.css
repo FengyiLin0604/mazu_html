@@ -1591,11 +1591,11 @@ body {
     }
     .lot-can{
         width: 215px;
-        top: 0;
+        top: 20%;
     }
     .picklot{
         top: 60%;
-        right: 10%;
+        right: 20%;
     }
     /* .picklot::before{
         right: -50%;
