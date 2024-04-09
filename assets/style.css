@@ -17,7 +17,7 @@ body {
     height: 100vh;
     touch-action: manipulation;
     touch-action: none;
-    overflow: hidden; /* 隐藏溢出的内容 */
+    /* overflow: hidden; */
     overflow-y: scroll;
 }
 /*  首頁 */
