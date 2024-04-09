@@ -725,17 +725,17 @@ body {
 }
 
   
-  .baecard-animating {
+  /* .baecard-animating {
     /* Temporary animation styles */
     animation: shake 0.5s infinite; /* Example animation */
-  }
+  } */
   
-  @keyframes shake {
+  /* @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     /* ... */
     100% { transform: translate(1px, -1px) rotate(1deg); }
-  }
+  } */
 .buashow{
     position: absolute;
     text-align: center;
@@ -1103,7 +1103,7 @@ body {
         display: block;
     }
     .introduce{
-        bottom: 5%;
+        bottom: 2%;
     }
     .introduce .starttodraw a{
         padding: 8px 70px;
@@ -1326,7 +1326,7 @@ body {
     }
     .picklot{
         display: block;
-        animation: shake 0.2s linear infinite;
+        /* animation: shake 0.2s linear infinite; */
         top: 70%;
     
     }
@@ -1437,7 +1437,7 @@ body {
     .container{
         background-image: url("/assets/homepage/425x800-起始畫面.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: top center;
         background-attachment: fixed;
     }
@@ -1445,7 +1445,7 @@ body {
         display: none;
     }
     .introduce{
-        bottom: 8%;
+        bottom: 6%;
     }
     .ear{
         width: 30%;
