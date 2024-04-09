@@ -224,11 +224,12 @@ const lotcontent = [
     },
     {
         "lotName":"籤王",
-        "lotNumber":"第二十一籤",
-        "lotCotentOne":"曉日瞳瞳萬象融",
-        "lotCotentTwo":"河清海晏慶年豐",
-        "lotCotentThree":"生逢盛世真歡樂",
-        "lotCotentFour":"好把心田作化工",
+        "lotNumber":"籤王",
+        "lotCotentOne":"恭喜恭喜恭喜你",
+        "lotCotentTwo":"恭喜恭喜恭喜你",
+        "lotCotentThree":"獲得籤王真開心",
+        "lotCotentFour":"獲得籤王真開心",
+        "lotContentExplain":"恭喜獲得籤王，抽到籤王的人會運勢非漲喔。",
     },
 ];
 
@@ -294,7 +295,7 @@ function removeLotCanAndShowLot(){
         lotpage.setAttribute('style','background-image:url("assets/draw/P4-背景.jpg");');
 
     }else{
-        lotpage.setAttribute('style','background-image:url("assets/lot/425x800-求籤畫面.jpg");');
+        // lotpage.setAttribute('style','background-image:url("assets/lot/425x800-求籤畫面.jpg");');
     }
     eyes.setAttribute('style','display:none');
     ear.setAttribute('style','display:none');
@@ -379,13 +380,8 @@ console.log(baecards);
       var nono = baestyle.querySelector('.baestyle .nono')//陰杯
       
       getRandomElement(baecards).classList.add('show');
-      var tempSpeciCard = baecards;//Sant
-      var tempSmile = baecards[0];//Smile
-      var tempNono = baecards[2];//Nono
       changedrawbackground();//變更畫面顯示
       console.log(temprandom);
-    //   var t = document.querySelector('.buashow');
-    //   t.classList.contains
       //判斷杯型
       if(temprandom.classList.contains('smile')){
         var buashow = document.querySelector('.buashow');
@@ -399,7 +395,6 @@ console.log(baecards);
         var smile = baestyle.querySelector('.baestyle .smile');//笑杯
         var sant = baestyle.querySelector('.baestyle .sant');//聖杯
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
-        // console.log(buashow);
         buashow.classList.add('show');
         showshinne.classList.add('show');
         smile.classList.add('show');
@@ -420,7 +415,6 @@ console.log(baecards);
         // console.log(buashow);
         buashow.classList.add('show');
         baestyle.classList.add('show');
-        showshinne.classList.add('show');
         sant.classList.add('show');      
         buashow.appendChild( reDrawbuttonObject('查看籤詩釋解'));
         localStorage.setItem('sant', 'true');
@@ -438,7 +432,7 @@ console.log(baecards);
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
         // console.log(buashow);
         buashow.classList.add('show');
-        showshinne.classList.add('show');
+        // showshinne.classList.add('show');
         nono.classList.add('show');
         buashow.appendChild(reDrawbuttonObject('請重新擲筊'));
       }
@@ -494,10 +488,7 @@ function changedrawbackground(){
     if(window.innerWidth<768){
         drawback.setAttribute('style','background-image:url("/assets/temple/768x1080-求籤畫面V2.jpg")');
     }
-    if(window.innerWidth<425){
-        drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
-    }
-    if(window.innerWidth<390){
+    if(window.innerWidth<480){
         drawback.setAttribute('style','background-image:url("/assets/temple/425x800-選廟地圖.jpg")');
     }
     // mazu.setAttribute('style','display:none;');
@@ -515,9 +506,9 @@ function resetbackground(){
     shinne.classList.remove('show');
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
-    if(window.innerWidth>=1440){
+    if(window.innerWidth<=1440){
         drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
-    }else if(window.innerWidth >767){
+    }else if(window.innerWidth >768){
         drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
     }else{
         drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
@@ -542,6 +533,10 @@ function reDrawbuttonObject(textContent){
         if(textContent==='請重新擲筊'){
             resetbackground();
             resetDrawShow();
+            var draweye = document.querySelector('.eyes');
+            var drawear = document.querySelector('.ear');
+            draweye.setAttribute('style','display:block')
+            drawear.setAttribute('style','display:block')
         }else{
             window.location.href="/showmessage.html";
         }
