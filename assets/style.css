@@ -1571,17 +1571,26 @@ body {
     .baestyle.show{
         margin: auto;
     }
+    .baestyle .spotright{
+        width: 200px;
+        height: 200px;
+        /* right: 0; */
+    }
+    .baestyle .spotleft{
+        width: 200px;
+        height: 200px;
+        /* left: 0; */
+    }
     .checkDraw{
         left: 30%;
     }
 }
 @media screen and (max-width:425px){
-    .buashow .shinne.show{
+    .buashow .shinne.show {
         display: block;
-        /* height: 400px; */
-        left: -35%;
-        width: 700px;
-        top: 10%;
+        height: 400px;
+        left: -110%;
+        top: -20%;
     }
     .baestyle .spotright{
         width: 100px;
