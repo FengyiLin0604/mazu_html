@@ -567,11 +567,11 @@ function getmessage(){
 
 }
 /* 地圖 */
-const tashi = document.querySelector('.tashi span:before');
-const newhouse = document.querySelector('.newhouse span:before');
-const zhongli = document.querySelector('.zhongli span:before');
-const taoyuan = document.querySelector('.taoyuan span:before');
-const taoyuanbig = document.querySelector('.taoyuanbig span:before');
+const tashi = document.querySelector('.tashi');
+const newhouse = document.querySelector('.newhouse');
+const zhongli = document.querySelector('.zhongli');
+const taoyuan = document.querySelector('.taoyuan');
+const taoyuanbig = document.querySelector('.taoyuanbig');
 if(tashi){
     tashi.addEventListener('mouseenter',function(e){
         console.log('movein');

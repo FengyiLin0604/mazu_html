@@ -197,6 +197,7 @@ body {
     /* left: -15px; */
     margin: auto;
     justify-content: center;
+    z-index: 999999;
 }
 .temple .map{
     width: fit-content;
