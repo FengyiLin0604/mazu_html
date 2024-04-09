@@ -483,7 +483,7 @@ body {
 .lot-can{
     position: relative;
     max-width: 300px;
-    top: 4%;
+    bottom: -5%;
     margin: auto;
     z-index: 999;
 }
@@ -945,7 +945,7 @@ body {
         display: none;
     }
     .lot-can{
-        top: 5%;
+        /* top: 5%; */
     }
     .draw{
         top: 50%;
@@ -1091,7 +1091,7 @@ body {
         display: none;
     }
     .lot-can{
-        top: 17%;
+        /* top: 17%; */
     }
 }
 @media only screen and (max-width:768px) {
@@ -1304,7 +1304,7 @@ body {
         background-size: cover;
     }
     .lot-can{
-        top: 15%;
+        /* top: 15%; */
     }
     .lotshinne{
         left: 0;
@@ -1591,7 +1591,7 @@ body {
     }
     .lot-can{
         width: 215px;
-        top: 5%;
+        /* top: 5%; */
     }
     .picklot{
         top: 60%;
