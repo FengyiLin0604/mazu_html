@@ -1225,7 +1225,7 @@ body {
 @media only screen and (max-width:1440px) {
     .container{
         overflow: hidden;
-        background-image: url('/assets/homepage/1440x1080-遊戲說明.jpg');
+        /* background-image: url('/assets/homepage/1440x1080-遊戲說明.jpg'); */
     }
     .container img{
         height: 100%;
