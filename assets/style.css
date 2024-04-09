@@ -17,8 +17,8 @@ body {
     height: 100vh;
     touch-action: manipulation;
     touch-action: none;
-    /* overflow: hidden; */
-    overflow-y: scroll;
+    overflow: hidden;
+    /* overflow-y: scroll; */
 }
 /*  首頁 */
 .container{
@@ -60,7 +60,7 @@ body {
     width: 100%;
 }
 .introduce{
-    position: absolute;
+    position: fixed;
     bottom: 2.5%;
     text-align: center;
     width: 100%;
@@ -1086,6 +1086,7 @@ body {
     color: #53606D;
     font-size: 1.6rem;
     letter-spacing: 2px;
+    overflow: scroll;
 }
 .rollbook h4{
     writing-mode:vertical-lr;
@@ -1853,7 +1854,7 @@ body {
     }
     .lots{
         background-image: url('/assets/lot/425x800-求籤畫面.jpg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
     }
