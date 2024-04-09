@@ -137,9 +137,9 @@ body {
         min-height: 100%;
     }
     .introduce{
-        bottom: 10%;
+        bottom: 15%;
         width: 200px;
-        height: auto;
+        height: 100px;
         left: 30%;
         display: block;
         flex-direction: unset;
