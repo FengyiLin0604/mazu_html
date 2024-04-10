@@ -37,6 +37,7 @@ body {
     background-size: 100%;
     background-position: bottom center;
     background-repeat: no-repeat;
+    background-attachment: center;
 }
 .container img{
     width: 100%;
@@ -1011,7 +1012,7 @@ body {
         display: none;
     }
     .lot-can{
-        /* top: 5%; */
+        top: 15%;
     }
     .draw{
         top: 50%;
@@ -1062,10 +1063,10 @@ body {
 
     }
 }
-@media only screen and (max-width:1024px) {
+@media only screen and (orientation:portrait) and (max-width:1024px) {
     .container{
         overflow: hidden;
-        background-image: url('/assets/homepage/1024x1080-遊戲說明.jpg');
+        background-image: url('/assets/homepage/768x1334-起始畫面.jpg');
     }
     .container img{
         height: 100%;
@@ -1084,7 +1085,7 @@ body {
         animation: upanddown 2s linear infinite;
     }
     .introduce{
-        bottom: 15%;
+        bottom: 10%;
     }
     .temple{
         background-image: url('/assets/temple/1024x1080-選廟地圖.jpg');
@@ -1190,12 +1191,19 @@ body {
         display: none;
     }
     .lot-can{
-        /* top: 17%; */
+        top: 20%;
+    }
+    #lots .ear{
+        top: 30%;
+    }
+    #lots .eyes{
+        top: 30%;
     }
     .messagePannel{
         background-image: url('/assets/1024x1080-起始畫面.jpg');
     }
 }
+
 @media only screen and (max-width:768px) {
     .container{
         background-image: url('/assets/homepage/768x1080-遊戲說明.jpg');
@@ -1544,6 +1552,16 @@ body {
     }
 
 }
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+    .container{
+        background-image: url('/assets/homepage/768x1080-遊戲說明.jpg');;
+        background-size: 100%;
+        background-position: top center;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+ }
 @media only screen and (max-width:480px) {
     .container{
         background-image: url("/assets/homepage/425x800-起始畫面.jpg");
@@ -1763,6 +1781,7 @@ body {
     }
     .rollbook p{
         width: 60%;
+        font-size: 1.4rem;
     }
     .rollbook h4
     {
@@ -1780,18 +1799,21 @@ body {
         top: 25%;
     }
     .dialog-content h3{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: inherit;
+        /* text-align: justify; */
     }
     .dialog-content p{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: #A64231;
         line-height: inherit;
+        /* text-align: justify; */
     }
     .dialog-content ul li{
         list-style: none;
         font-size: 1rem;
         line-height: inherit;
+        /* text-align: justify; */
     }
 }
 @media only screen and (max-width:400px) {
