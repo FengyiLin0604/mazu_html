@@ -770,19 +770,32 @@ if(shareBtn){
         window.location.href="https://st-url.com/瘋媽祖粉專貼文連結";
     });
 }
-playbackgroundmusic();
+// playbackgroundmusic();
 function playdrawmusic(){
     // stopplaymusic();
     const audio = document.getElementById("audio-element");
     audio.currentTime = 0;
     audio.play();
 }
+var musicState = false;
 function playbackgroundmusic(){
     const audio2 = document.createElement("audio");
-    // audio2.classList.add('music');
-    audio2.src = "assets/backgroundmusic.mp3";
-    audio2.play();
+    const t = document.getElementById("audio-element2");
+    if(musicState){
+        console.log(musicState);
+    }else{
+        t.currentTime = 0;
+        t.play();
+        // audio2.classList.add('music');
+        audio2.src = "assets/backgroundmusic.mp3";
+        audio2.play();
+        musicState = true;
+        console.log(musicState);
+    }
+
 }
+
+document.addEventListener("click", playbackgroundmusic);
 
 function stopplaymusic(){
     var audio_stop = document.getElementsByTagName('audio');

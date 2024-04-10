@@ -841,7 +841,7 @@ body {
     max-width: 100%;
     width: 100vw;
     height: 100vh;
-    background-image: url('/assets/draw/P4-背景.jpg');
+    background-image: url('/assets/draw/1920x1080_媽祖.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -881,7 +881,7 @@ body {
     letter-spacing: 6px;
 }
 .shareBtn{
-    position: absolute;
+    position: fixed;
     bottom: 18%;
     width: 100%;
     display: flex;
@@ -1054,6 +1054,13 @@ body {
         font-size: 1rem;
         line-height: inherit;
     }
+    .messagePannel{
+        background-image: url('/assets/draw/1440x1080-求籤畫面.jpg');
+        background-position: top center;
+    }
+    .shareBtn{
+
+    }
 }
 @media only screen and (max-width:1024px) {
     .container{
@@ -1184,6 +1191,9 @@ body {
     }
     .lot-can{
         /* top: 17%; */
+    }
+    .messagePannel{
+        background-image: url('/assets/1024x1080-起始畫面.jpg');
     }
 }
 @media only screen and (max-width:768px) {
@@ -1760,7 +1770,7 @@ body {
         padding-bottom: 10px;
     }
     .shareBtn{
-        bottom: 15%;
+        bottom: 5%;
     }
 
     .tempactivedialog{
