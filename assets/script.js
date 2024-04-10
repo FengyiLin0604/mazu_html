@@ -724,6 +724,8 @@ function ckpage(){
         if(!choosecontetn=== ''){
             console.log(choosecontetn);
             openDialog('taoyuanbig');
+        }else{
+            openDialog(choosecontetn);
         }
         console.log(choosecontetn);
         
