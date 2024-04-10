@@ -723,7 +723,7 @@ function ckpage(){
         var choosecontetn = choosetemp[0].replace('choosetemp=','');
         if(!choosecontetn=== ''){
             console.log(choosecontetn);
-            openDialog(choosecontetn);
+            openDialog('taoyuanbig');
         }
         console.log(choosecontetn);
         
