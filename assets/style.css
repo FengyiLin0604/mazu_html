@@ -635,12 +635,14 @@ body {
     width: 300px;
     top: 10%;
     right: 10%;
+    display: none;
     animation: upanddown 2s linear infinite;
 }
 #lots .eyes{
     width: 300px;
     top: 10%;
     left: 10%;
+    display: none;
     animation: upanddown 2s linear infinite;
 }
   
