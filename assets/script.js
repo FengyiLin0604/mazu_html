@@ -330,6 +330,7 @@ const throbae = document.getElementById('baemove');
 if(throbae){
     throbae.addEventListener('click',function(e){
         baechange();
+        playdrawmusic();
     });
 }
 
@@ -437,7 +438,7 @@ console.log(baecards);
       }
         console.log(temprandom);
         // showdraw();
-    }, 3000);
+    }, 5000);
   } else {
     intervalId = setInterval(() => {
         hideAllCards(); // 隱藏所有圖片
@@ -797,4 +798,23 @@ if(shareBtn){
         window.location.href="https://st-url.com/瘋媽祖粉專貼文連結";
     });
 }
+playbackgroundmusic();
+function playdrawmusic(){
+    // stopplaymusic();
+    const audio = document.getElementById("audio-element");
+    audio.currentTime = 0;
+    audio.play();
+}
+function playbackgroundmusic(){
+    const audio = document.createElement("audio");
+    audio.classList.add('music');
+    audio.src = "assets/backgroundmusic.wav";
+    audio.play();
+}
 
+function stopplaymusic(){
+    var audio_stop = document.getElementsByTagName('audio');
+    console.log(audio_stop);
+    audio_stop.pause();
+    audio_stop.currentTime = 0;
+}
