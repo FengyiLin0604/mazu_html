@@ -1753,7 +1753,7 @@ body {
         height: 100%;
     }
  }
-@media only screen and (orientation:landscape) and (max-width:480px) {
+@media only screen and (orientation:portrait) and (max-width:480px) {
     .container{
         background-image: url("/assets/homepage/425x800-起始畫面.jpg");
         background-repeat: no-repeat;
