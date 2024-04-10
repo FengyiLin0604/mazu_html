@@ -739,13 +739,14 @@ body {
     background-color: gold;
     color: red;
 }
-.buashow{
+.buashow {
     display: none;
-    position: absolute;
+    position: fixed;
     text-align: center;
-    top: 20%;
+    top: 15%;
     left: 30%;
 }
+
 .buashow.show{
     display: block;
 }
@@ -1019,6 +1020,13 @@ body {
     #draw{
         background-image: url('/assets/draw/1440x1080-求籤畫面.jpg');
     }
+    .buashow {
+        display: none;
+        position: fixed;
+        text-align: center;
+        top: 10%;
+        left: 25%;
+    }
     .buabae{
         background-color: rgba(255, 255, 255, 0.8);
         padding: 30px;
@@ -1029,6 +1037,7 @@ body {
         top: 0;
     }
     #baemove{
+        bottom: 8%;
         left: 39%;
     }
     .dialog-content h3{
