@@ -407,6 +407,7 @@ function baechange() {
         var nono = baestyle.querySelector('.baestyle .nono')//陰杯
         buashow.classList.add('show');
         baestyle.classList.add('show');
+        showshinne.classList.add('show');
         sant.classList.add('show');      
         buashow.appendChild( reDrawbuttonObject('查看籤詩釋解'));
         localStorage.setItem('sant', 'true');
@@ -425,6 +426,7 @@ function baechange() {
         buashow.classList.add('show');
         nono.classList.add('show');
         buashow.appendChild(reDrawbuttonObject('重新抽籤詩'));
+        showshinne.classList.add('show');
       }
         // showdraw();
     }, 5000);
