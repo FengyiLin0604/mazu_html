@@ -229,7 +229,7 @@ const lotcontent = [
         "lotCotentTwo":"恭喜恭喜恭喜你",
         "lotCotentThree":"獲得籤王真開心",
         "lotCotentFour":"獲得籤王真開心",
-        "lotContentExplain":"恭喜獲得籤王，抽到籤王的人會運勢非漲喔。",
+        "lotContentExplain":"恭喜獲得籤王，抽到籤王的人會運勢飛漲喔。",
     },
 ];
 
