@@ -1701,7 +1701,7 @@ body {
         background-position: top center;
     }
     .lotcontent {
-        left: 9.5%;
+        left: 13%;
         top: 35%;
     }
     .lotcontent.active{
@@ -1792,5 +1792,10 @@ body {
         list-style: none;
         font-size: 1rem;
         line-height: inherit;
+    }
+}
+@media only screen and (max-width:400px) {
+    .lotcontent {
+        left: 9.5%;
     }
 }
