@@ -26,7 +26,7 @@ body {
     touch-action: manipulation;
     touch-action: none;
     overflow: hidden;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 /*  首頁 */
 .container{
@@ -647,7 +647,7 @@ body {
 #draw{
     width: 100vw;
     height: 100vh;
-    background-image: url('/assets/1440x1080-起始畫面.jpg');
+    background-image: url('/assets/draw/1920x1080_媽祖.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -682,6 +682,10 @@ body {
     flex-direction: column;
     align-items: center;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 60px;
+    border-radius: 30px;
+    margin-bottom: 10px;
 }
 
 /* 默認隱藏所有圖片 */
@@ -693,7 +697,7 @@ body {
 .baecard.show {
     display: block;
     position: relative;
-    top: 20%;
+    /* top: 20%; */
 }
 
 /* 圖片大小和居中設定 */
@@ -738,8 +742,8 @@ body {
     display: none;
     position: absolute;
     text-align: center;
-    top: 10%;
-    left: 25%;
+    top: 20%;
+    left: 30%;
 }
 .buashow.show{
     display: block;
@@ -938,6 +942,7 @@ body {
     /* max-width: 300px; */
     border-radius: 30px;
     border-color: #53606D;
+    overflow: scroll;
 }
 .dialogClose{
     font-size: 3rem;
@@ -1731,7 +1736,12 @@ body {
         top: 35%;
     }
     .rollbook p{
-        width: 320px;
+        width: 60%;
+    }
+    .rollbook h4
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .shareBtn{
         bottom: 15%;

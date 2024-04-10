@@ -467,6 +467,10 @@ function changedrawbackground(){
     var drawback = document.querySelector('#draw');
     var mazu = document.querySelector('.mazu');
     var draw = document.querySelector('.draw');
+    console.log(drawback);
+    if(window.innerWidth>1440){
+        drawback.setAttribute('style','background-image:url("/assets/draw/1920x1080.jpg")');
+    }
     if(window.innerWidth<=1440){
         drawback.setAttribute('style','background-image:url("/assets/temple/1440x1080-選廟地圖.jpg")');
     }
@@ -714,11 +718,14 @@ function getLots(){
 function ckpage(){
     var messagepage = document.querySelector('#message');
     if(messagepage){
+        
         var choosetemp = document.cookie.split(';');
         var choosecontetn = choosetemp[0].replace('choosetemp=','');
-    
+        if(choosecontetn){
+            openDialog(choosecontetn);
+        }
         console.log(choosecontetn);
-        openDialog(choosecontetn);
+        
         setMessage();
     }else{
         console.log('Not Message Page');
