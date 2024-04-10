@@ -721,7 +721,8 @@ function ckpage(){
         
         var choosetemp = document.cookie.split(';');
         var choosecontetn = choosetemp[0].replace('choosetemp=','');
-        if(choosecontetn){
+        if(!choosecontetn=== ''){
+            console.log(choosecontetn);
             openDialog(choosecontetn);
         }
         console.log(choosecontetn);
