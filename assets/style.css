@@ -936,25 +936,26 @@ body {
 
 .tempactivedialog{
     position: fixed;
-    top: 10%;
+    top: 35%;
     left: 25%;
     display: none;
     z-index: 99999999;
     background-color: rgba(255, 255, 255, 1);
     width: 50%;
-    height: 80%;
+    height: 300px;
+    /* max-width: 300px; */
     border-radius: 30px;
     border-color: #53606D;
 }
 .dialogClose{
     font-size: 3rem;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     color: #A64231;
     position: absolute;
     top: 0;
     right: 5%;
-    z-index: 999999;
+    z-index: 99999999999;
 }
 .tempactivedialog.actived{
     display: flex;
@@ -1516,7 +1517,7 @@ body {
     }
     .tempactivedialog{
         width: 80%;
-        top: 10%;
+        top: 20%;
         left: 10%;
     }
 
