@@ -1737,12 +1737,12 @@ body {
         background-image: url('/assets/draw/425x800-求籤畫面.jpg');
     }
     .draw{
-        top: 50%;
+        top: 42%;
         width: 200px;
         height: 200px;
     }
     #baemove{
-        left: 27%;
+        left: 25%;
         bottom: 30%;
     }
     .buabae{
