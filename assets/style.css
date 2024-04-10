@@ -1786,6 +1786,9 @@ body {
         top: 15%;
         display: grid;
     }
+    .temple .title {
+        font-size: 1rem;
+    }
     .temple .title span{
         display: none;
     }
@@ -1867,6 +1870,11 @@ body {
     .templeintro .templeintro-wrapper a{
         left: 17%;
         top: 20px;
+        padding: 10px 70px;
+    }
+    
+    .templeintro .templeintro-wrapper h3{
+        width: 80%;
     }
     .templeintro .templeintro-wrapper h3::before {
         width: 40px;
@@ -1924,26 +1932,44 @@ body {
     }
     .lot-can{
         width: 220px;
-        /* top: 5%; */
+        top: auto;
+        max-width: 50%;
     }
     .picklot{
         top: 60%;
-        right: 20%;
+        right: ㄅ0%;
+    }
+    .picklot span{
+        font-size: 1.2rem;
     }
     /* .picklot::before{
         right: -50%;
     } */
     #lots .ear{
+        display: block;
         width: 30%;
+        right: 5%;
+        z-index: 8;
     }
     #lots .eyes{
+        display: block;
         width: 30%;
+        left: 5%;
+        z-index: 8;
     }
     .lotshinne.show{
         display: none;
     }
+    .lotcontent .tbody p{
+        font-size: 1.4rem;
+        width: 40px;
+    }
+    .lotcontent .startdraw a{
+        left: -5%;
+    }
     #draw{
         background-image: url('/assets/draw/425x800-求籤畫面.jpg');
+        justify-content: center;
     }
     .draw{
         top: 42%;
@@ -1951,7 +1977,7 @@ body {
         height: 200px;
     }
     #baemove{
-        left: 25.5%;
+        left: auto;
         bottom: 25%;
     }
     .buabae{
@@ -1960,8 +1986,11 @@ body {
         border-radius: 40px;
         margin-bottom: 10px;
     }
+    .buashow{
+        left: auto;
+    }
     .baeactive{
-        top: 25%;
+        top: -15%;
     }
     .baecard.show{
         top: 0;
@@ -2007,8 +2036,109 @@ body {
         /* text-align: justify; */
     }
 }
-@media only screen and (orientation:portrait) and (max-width:480px) {
-    
+@media only screen and (orientation:landscape) and (max-width:480px) {
+      .temple{
+        background-image: url('/assets/temple/1024x1080-選廟地圖.jpg');
+    }
+    .templeWrap{
+        top: 15%;
+        display: grid;
+    }
+    .temple .title{
+        font-size: 1.6rem;
+    }
+    .temple .title span{
+        display: none;
+    }
+    .templeintro .templeintro-wrapper{
+        left: 0;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 100%;
+    }
+    .templeintro .templeintro-wrapper .introContent{
+        padding-top: 20px;
+        width: 100%;
+    }
+    .map{
+        display: none;
+    }
+    .mapmobile{
+        display: grid;
+        grid-row-gap: 20px;
+        margin-bottom: 10px;
+    }
+    .templeone{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        justify-content: center;
+    }
+    .templeone div{
+        background-color: #A64231;
+        border-radius: 30px;
+        color: #f7f7f7;
+        padding: 8px;
+    }
+    .templeone span{
+        font-size: 3rem;
+        padding-left: 8px;
+        padding-right: 8px;
+        position: relative;
+    }
+    .templetwo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        justify-content: center;
+    }
+    .templetwo div{
+        background-color: #A64231;
+        border-radius: 30px;
+        color: #f7f7f7;
+        padding: 8px;
+        width: 100%;
+        margin: auto;
+    }
+    .templeone div.actived{
+        background-color: #f7f7f7;
+        color: #A64231;
+    }
+    .templetwo div.actived{
+        background-color: #f7f7f7;
+        color: #A64231;
+    }
+    .templetwo span{
+        font-size: 3rem;
+        padding-left: 8px;
+        padding-right: 8px;
+        position: relative;
+    }
+    .introContent{
+        margin-bottom: 20px;
+    }
+    .templeintro .templeintro-wrapper a{
+        left: 17%;
+        top: 20px;
+        padding: 10px 280px;
+    }
+    .content-wrapper p{
+        font-size: 1.4rem;
+    }
+    .templeintro .templeintro-wrapper h3{
+        width: 80%;
+        margin: auto;
+    }
+    .templeintro .templeintro-wrapper h3::before {
+        width: 60px;
+        height: 60px;
+        top: -2px;
+        left:-16px;
+    }
+    .templeintro .templeintro-wrapper .introContent{
+        max-width: 80%;
+        height: auto;
+    }
 }
 @media only screen and (max-width:400px) {
     .lotcontent {
