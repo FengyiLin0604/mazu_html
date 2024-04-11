@@ -28,6 +28,9 @@ body {
     overflow: hidden;
     overflow-y: scroll;
 }
+.lot-can{
+        top: 20%;
+    }
 /*  首頁 */
 .container{
     position: relative;
@@ -1193,6 +1196,9 @@ body {
     }
     .lotcontent{
         left: 31.5%;
+    }
+    .loticon{
+        display: none;
     }
     .picklot{
         display: none;
