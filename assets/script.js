@@ -288,7 +288,7 @@ function removeLotCanAndShowLot(){
     var eyes = document.querySelector('.eyes');
     var ear = document.querySelector('.ear');
     if(window.innerWidth>768){
-        lotpage.setAttribute('style','background-image:url("assets/draw/P4-背景.jpg");');
+        // lotpage.setAttribute('style','background-image:url("assets/draw/P4-背景.jpg");');
 
     }else{
         // lotpage.setAttribute('style','background-image:url("assets/lot/425x800-求籤畫面.jpg");');
@@ -468,6 +468,7 @@ function baechange() {
 function changedrawbackground(){
     var drawback = document.querySelector('#draw');
     var mazu = document.querySelector('.mazu');
+    mazu.setAttribute('style','display:none');
     var draw = document.querySelector('.draw');
     console.log(drawback);
     if(window.innerWidth>1440){
