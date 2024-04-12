@@ -508,7 +508,7 @@ function resetbackground(){
         drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
     }
     // mazu.setAttribute('style','display:block;');
-    draw.setAttribute('style','display:block;');
+    draw.setAttribute('style','display:flex;');
 }
 
 function showdraw(){
