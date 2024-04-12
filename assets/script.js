@@ -497,17 +497,18 @@ function resetbackground(){
     var buashow = document.querySelector('.buashow');
     var shinne = buashow.querySelector('.shinne');
     var buastyle = document.querySelector('.baestyle');
+    mazu.setAttribute('style','diplay:flex');
     buashow.classList.remove('show');
     shinne.classList.remove('show');
     buastyle.classList.remove('show');
     buashow.removeChild(buashow.lastChild);
-    if(window.innerWidth>=1440){
-        drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
-    }else if(window.innerWidth >768){
-        drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
-    }else{
-        drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
-    }
+    // if(window.innerWidth>=1440){
+    //     drawback.setAttribute('style','background-image:url("/assets/draw/1440x1080-求籤畫面.jpg")');
+    // }else if(window.innerWidth >768){
+    //     drawback.setAttribute('style','background-image:url("/assets/draw/768x1080-求籤畫面.jpg")');
+    // }else{
+    //     drawback.setAttribute('style','background-image:url("/assets/lot/425x800-求籤畫面.jpg")');
+    // }
     // mazu.setAttribute('style','display:block;');
     draw.setAttribute('style','display:flex;');
 }
