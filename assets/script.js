@@ -534,7 +534,7 @@ function reDrawbuttonObject(textContent){
             draweye.setAttribute('style','display:block')
             drawear.setAttribute('style','display:block')
         }else if(textContent==='重新抽籤詩'){
-            window.location.href="/lots_copy.html";
+            window.location.href="/lots.html";
         }else{
             window.location.href="/showmessage.html"
         }
